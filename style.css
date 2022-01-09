@@ -54,6 +54,7 @@ body{
     height: 19px !important;
     font-size: 16px;
     color: #c80000 !important;
-    background-color: #ECE8E8;
+    background-color: #ECE8E8 !important;
+    border:none;
 }
 
