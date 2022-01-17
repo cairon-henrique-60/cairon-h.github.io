@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro de Fornecedores</title>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <fieldset class="cabecalho">
+      
+        <label class="logo">
+          <img src="imagens/Logo.svg" alt="Logo da empresa" width="260px" height="52px"/>
+        </label>
+        <label class="usuario">
+        <img class="fotoUsuario" src="imagens/fotoUsuario.svg" alt="Imagem de perfil do Usuario" width="40px" height="40px"/>Jacqueline Milke | Administrador
+        <img class="seta" src="imagens/mostrarInformacoes.svg"width="10px"height="10px"/>
+        </label>
+      >
+    </fieldset>
+    
+      <nav>
+        <ul>
+          <li><img src="imagens/Dashboard.svg"/>Dashboard</li>
+          <li><img src="imagens/Caixa.svg"/>Caixa</li>
+          <li><img src="imagens/Clientes.svg"/>Clientes</li>
+          <li><img src="imagens/Produtos.svg"/>Produtos</li>
+          <li> 
+            <div id="btn-action" type="button" onclick="mostrarCampo()">
+            <img src="imagens/fornecedoresB.svg"/>Fornecedores
+            </div>
+          </li>
+          <li><img src="imagens/Financeiro.svg"/>Financeiro</li>
+          <li><img src="imagens/Permissoes.svg"/>Permissões</li>
+          <li><img src="imagens/Configuracoes.svg"/>Configurações</li>
+          <li><img src="imagens/Ajuda.svg"/>Ajuda</li>
+          <li><img src="imagens/Sair.svg"/>Sair</li>
+        </ul>
+      </nav>
+    
+    <div class="container">
+    <div class="pesquisaFornecedor">
+      <div>
+         <h2 class="fornecedor2">Fornecedores</h2><hr><br><br>
+        
+      </div>
+      <div >
+        <input class="textPesquisa" stype="text" id="textPesquisa" placeholder="Perquisar por..." />
+        
+        <button class="botaoPesquisar" >Pesquisar</button>
+        <button button class="botaoNovo">Novo Fornecedor</button>
+      </div>
+    </div>
+    <form>
+      <div class="cadastroFornecedor">
+          <h2 class="cadFornecedor">Cadastro de Fornecedores</h2>
+          <hr><br>
+          <div>
+            <label>Razão Social*</label><br>
+            <input class="inputMaior" type="text" name="razaoSocial" id="razaoSocial" required>
+          </div><br><br>
+          <div>
+            <label>Nome Fantasia</label><br>
+            <input class="inputMaior" type="text" name="nomeFantasia" id="nomeFantasia">
+          </div><br><br>
+          <div>
+            <label>CNPJ</label><br>
+            <input class="inputMenor" type="text" name="cnpj" id="cnpj" placeholder="00.000.000/0001-00">
+          </div>
+          <div>
+            <label>CPF</label><br>
+            <input class="inputMenor" type="text" name="cpf" id="cpf" placeholder="000.000.000-00">
+          </div>
+          <div>
+            <label>Insc. Estadual</label><br>
+            <input class="inputMenor" type="text" name="inscEstadual" id="inscEstadual" placeholder="000.000.000.000">
+          </div>
+          <div>
+            <label>Insc. Municipal</label><br>
+            <input class="inputMenor" type="text" name="inscMunicipal" id="inscMunicipal" placeholder="0000000000-0">
+          </div><br><br>
+          <div>
+            <label>Endereço</label><br>
+            <input class="inputMaior" class="inputMaior" type="text" name="endereco" id="endereco" >
+          </div><br><br>
+          <div>
+            <label>CEP</label><br>
+            <input class="inputMenor" type="text" name="cep" id="cep" placeholder="89066-690">
+          </div>
+          <div>
+            <label>Cidade</label><br>
+            <input class="inputMenor" type="text" name="cidade" id="cidade" placeholder="Blumenau">
+          </div>
+          <div>
+            <label>Estado</label><br>
+            <input class="inputMenor" type="text" name="estado" id="estado" placeholder="Santa Catarina">
+          </div>
+          <div>
+            <label>País</label><br>
+            <input class="inputMenor" type="text" name="pais" id="pais" placeholder="Brasil">
+          </div><br><br>
+          <div>
+            <label>Telefone*</label><br>
+            <input type="tel" name="telefone1" id="telefone1" placeholder="+55 (47)9911411984" required>
+            <input type="tel" name="telefone2" id="telefone2" placeholder="+55 (47)9911411984">
+          </div>
+          <div>
+            <label>E-mail*</label><br>
+            <input type="email" name="email" id="email" placeholder="jacquemilke@gmail.com" required>
+          </div><br><br>
+          <button class="botaoSalvar" type="submit">Salvar</button>
+          <button class="botaoCancelar">Cancelar</button>
+          
+        </div>
+    </div>
+    </form>
+  </body>
+</html>
