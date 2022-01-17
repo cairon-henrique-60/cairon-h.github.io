@@ -33,8 +33,7 @@ body{
         
 }
 /* Estilo da legenda */
-.form-login legend{
-    text-transform: uppercase;
+.form-login legend{    
     text-align: center;    
     margin-bottom: 1.25em;
     padding: 30px;
@@ -123,7 +122,7 @@ body{
        float: right;
        height: 23.125em;
        width: 25em;
-       margin-top: 30%;
+       margin-top: 38%;
        margin-right: 2em;
    }
    
@@ -139,8 +138,8 @@ body{
    }
 
    .form-login legend{
-       margin: 33% auto 5%;
-       font-size: 30px;
+       margin: 25% auto 5%;
+       font-size: 32px;
        height: 100% !important;
    }
     
