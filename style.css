@@ -9,8 +9,8 @@ body{
 }
 /* Estilo da logo */
 .logo img{ 
-    width: 20em;   
-    height: 15em;
+    width: 15em;   
+    height: 10em;
     box-sizing: border-box;
     margin: 5% auto 3%;
     display: block;
@@ -95,8 +95,8 @@ body{
         box-sizing: content-box;
     }
     .logo img{
-        width: 27.625em;
-        height: 21.8125em;
+        width: 20em;
+        height: 18em;
         margin: 5% auto 3%;
     }
 
