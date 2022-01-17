@@ -1,5 +1,5 @@
-@media  screen and (min-width: 350px){
-    
+@media  screen and (min-width: 21.875em){
+/* Telas entre 350px a 550px*/    
 body{
     background: #fff;
     @import url ('https://fonts.googleapis.com/css2? family = Roboto: ital, wght @ 0,300; 0,700; 0,900; 1,300; 1,700; 1,900 & display = swap');
@@ -87,7 +87,7 @@ body{
 }
 
 @media screen and (min-width: 34.375em){
-     
+    /* Telas entre 550px a 700px */
     body{
         max-height: 100%;
         width: 100%;
@@ -105,12 +105,13 @@ body{
     }
 
     .form-login legend{
-        padding-top: 5px;
-        padding-bottom: 5px;
+        margin-top: -1.5em;
+        margin-bottom: -0.5em;
     }
 }
 
 @media  screen and (min-width: 62.5em){
+    /* Telas acima de 700px */
     body{
         max-height: 100%;
         width: 70%;
@@ -120,15 +121,15 @@ body{
    
     .logo img{
        float: right;
-       height: 370px;
-       width: 400px;
+       height: 23.125em;
+       width: 25em;
        margin-top: 30%;
        margin-right: 2em;
    }
    
    .sessao-login{ 
        display: flex;
-       width: 549px;
+       width: 34.3125em;
    }
 
    .form-login input{
