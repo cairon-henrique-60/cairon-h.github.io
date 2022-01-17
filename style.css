@@ -2,7 +2,8 @@
 /* Telas entre 350px a 550px*/    
 body{
     background: #fff;
-    @import url ('https://fonts.googleapis.com/css2? family = Roboto: ital, wght @ 0,300; 0,700; 0,900; 1,300; 1,700; 1,900 & display = swap');
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;0,900;1,300;1,700;1,900&display=swap');
+    font-family: 'Roboto', sans-serif;
     line-height: 18.75px;
     width: 100%;
     margin: 0px;
