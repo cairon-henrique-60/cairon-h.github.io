@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="description" content="Formulario de cadastro de produtos.">    
+    <meta charset="description" content="Formulario de cadastro de produtos."> 
+    <link rel="stylesheet" href="form-produtos.css">   
     <title>Cadastro de Produtos</title>
 </head>
 <body>
@@ -13,7 +14,7 @@
             <form  class="container-pesquisa">
                 <legend>Produtos</legend>
                 <label>
-                    <input class="pesq-produtos" type="text" placeholder="Pesquise" autofocus required>
+                    <input class="pesq-produtos" type="text" placeholder="Pesquisar por" autofocus required>
                 </label>
                 <input  class="btn-pesquisar"  type="submit" value="pesquisar">
                 <input class="novo-fonr" type="button" value="novo produto" >
@@ -35,9 +36,9 @@
         </div>    
 
         <div class="pesqui">
-            <form class="form-pesuisa">       
+            <form class="form-pesquisa">       
                 <fieldset class="container-produtos">
-                    <labe>
+                    <label>
                         <span>Grupo</span>
                         <select id="grupo" required>
                             <option value="0">Selecione</option>
@@ -64,7 +65,7 @@
                             <option value="0">M3-Metro Cúbico</option>
                             <option value="0">MIL-Milheiro</option>
                             <option value="0">PAR-Par</option>
-                            <option value="0">PC-Peça</option>class="container-produtos"
+                            <option value="0">PC-Peça</option>
                             <option value="0">PCT-Pacote</option>
                             <option value="0">SC-Saca/Saco</option>
                             <option value="0">TON_Tonel. Metro. Líquido</option>
@@ -77,7 +78,7 @@
                         <select id="localizacao">
                             <option value="">Selecione</option>
                             <option value="">Corredor central/Prateleira 5</option>
-                            <option value="">Corredor 4/Prateleirclass="container-produtos"a 7</option>
+                            <option value="">Corredor 4/Prateleira 7</option>
                             <option value="">Corredor 2/Prateleira 5</option>
                         </select>
                     </label>
@@ -91,27 +92,28 @@
         </div>
         <div class="custeio">
             <form class="form-custo">
-                <fieldset>
-                    <span>Porcentagem Custo</span>
+                <fieldset>                    
                     <label class="porcentagem-custo" unit="%">
+                        <span>Porcentagem Custo</span>
                         <input type="number" min="0.00" max="120.00">
-                    </label>
-                    <span>Porcentagem de Lucro</span>
+                    </label>                    
                     <label class="porcentagem-lucro" unit="%">
+                        <span>Porcentagem de Lucro</span>
                         <input type="number" min="0.00" max="120.00">
-                    </label>
-                    <label class="preco-venda" unit="%">
+                    </label>                    
+                    <label class="preco-venda"unit="%">         
                         <span>Preço Sugerido</span>
                         <input type="number" required>
-                    </label>
+                    </label>                    
                     <label class="preco-venda" unit="%">
                         <span>Estoque Minino</span>
                         <input type="number" required>
                     </label>
-                    
-                    <input class="cancelar" type="reset" value="Cancelar">
+                    <div class="saida">
+                        <input class="cancelar" type="reset" value="Cancelar">
 
-                    <input class="salvar" type="submit" value="Salvar">
+                        <input class="salvar" type="submit" value="Salvar">
+                    </div>
                 </fieldset>
             </form>
         </div>

@@ -1,0 +1,148 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    max-width: 58%;
+    width: 100%;
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;0,900;1,300;1,700;1,900&display=swap');
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.pesquisa{
+    height: 143px;
+}
+
+.pesquisa legend{
+    color: #001470;
+    margin-left: 17px;
+    padding-top: 25px;
+    text-transform: uppercase;
+}
+
+.pesq-produtos {
+    width: 573px;
+    height: 20px;
+    margin: 30px -70px 35px 17px;
+}
+
+.btn-pesquisar{
+    height: 24px;
+    width: 90px;
+    background: #001470;
+    color: #fff;
+    border: none;
+}
+
+.novo-fonr{
+    background: #FFBE00;
+    border: none;
+    height: 24px;
+    width: 140px;
+}
+
+.container-cadastro{
+    width: 100%;
+    margin-top: 41px;   
+}
+
+.form-cadastro legend{
+    color: #001470;
+    text-transform: uppercase;
+    margin: 25px 17px  35px;
+    padding-top: 25px;
+    font-size: 18px;
+}
+
+.form-cadastro span{
+    display: block;
+    margin: 20px 17px 9px;
+    color: #4C4646;
+}
+
+.form-cadastro input{
+    margin-left: 17px;
+    width: 750px;
+    height: 20px;
+    border: 2px solid #F2F2F2;
+}
+
+.pesqui fieldset{
+    border: none;
+    margin-top: 28px;
+    width: 100%;
+}
+
+.form-pesquisa label{
+    display: inline-block; 
+}
+
+.form-pesquisa select{
+    margin-left: 17px;
+    height: 25px;
+    width: 170px;
+    border: 1px solid #4C4646;
+    background: #fff;    
+}
+
+.form-pesquisa span{
+    display: block;
+    margin-left: 17px;  
+    color: #4C4646;
+    font-size: 16px;  
+}
+
+.form-pesquisa input{
+    margin-left: 17px;
+    height: 25px;
+    width: 170px;
+    border: 1px solid #f2f2f2;
+}
+
+.form-custo fieldset{
+    border: none;
+    width: 100%;
+}
+
+.form-custo span{
+    display: block;
+    color: #4C4646;
+    margin-top: 28px;
+    margin-left: 17px;
+}
+
+.form-custo label{
+  display: inline-block;
+}
+
+.form-custo input{
+    width: 169px;
+    height: 25px;
+    margin-left: 16px;  
+    border: 1px solid #F2F2F2;
+}
+
+.saida {
+    float: right;
+    margin: 53px 18px
+}
+
+.saida input{
+    width: 146px;
+    height: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+}
+
+.salvar{
+    background: #001470;
+}
+
+.cancelar{
+    background: #700000;
+}
+
+
