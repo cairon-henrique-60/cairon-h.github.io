@@ -5,18 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="description" content="Formulario de cadastro de produtos."> 
-    <link rel="stylesheet" href="form-produtos.css">   
+    <link rel="stylesheet" href="form-produtos.css">       
     <title>Cadastro de Produtos</title>
 </head>
 <body>
-    <section class="produtos">
+    <section class="cadastro-produtos">
         <div class="pesquisa">
             <form  class="container-pesquisa">
                 <legend>Produtos</legend>
                 <label>
                     <input class="pesq-produtos" type="text" placeholder="Pesquisar por" autofocus required>
                 </label>
-                <input  class="btn-pesquisar"  type="submit" value="pesquisar">
+                <i id="lupa" class="fas fa-search"></i>
+                <input  class="btn-pesquisar"  type="submit"value="pesquisar">  
+                <i  id="search" class="fas fa-plus-circle"></i>        
                 <input class="novo-fonr" type="button" value="novo produto" >
             </form>
         </div>
@@ -116,7 +118,9 @@
                     </div>
                 </fieldset>
             </form>
-        </div>
+        </div>                
     </section>
+    <script src="https://kit.fontawesome.com/562a71b37f.js" crossorigin="anonymous"></script>
+    
 </body>
 </html>

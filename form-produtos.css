@@ -9,8 +9,7 @@ body{
     @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;0,900;1,300;1,700;1,900&display=swap');
     font-family: 'Roboto', sans-serif;
 }
-
-
+ 
 .pesquisa{
     height: 143px;
 }
@@ -23,9 +22,10 @@ body{
 }
 
 .pesq-produtos {
-    width: 573px;
+    width: 55%;
     height: 20px;
     margin: 30px -70px 35px 17px;
+    outline: none;
 }
 
 .btn-pesquisar{
@@ -34,18 +34,38 @@ body{
     background: #001470;
     color: #fff;
     border: none;
+    margin-right: 15px;
+    padding-left: 30px;
+    text-transform: uppercase;
+    box-sizing: content-box;
+}
+
+#lupa{
+    position: relative;
+    margin-right: -30px;
+    color: #F2F2F2;
+    font-size: 13px;
 }
 
 .novo-fonr{
     background: #FFBE00;
     border: none;
     height: 24px;
-    width: 140px;
+    width: 120px;
+    padding-left: 30px;
+    text-transform: uppercase;
+    box-sizing: content-box;
+}
+
+#search{
+    position: relative;
+    margin-right: -30px;
+    color: #F2F2F2 ;
 }
 
 .container-cadastro{
     width: 100%;
-    margin-top: 41px;   
+    margin-top: -15px;   
 }
 
 .form-cadastro legend{
@@ -67,11 +87,13 @@ body{
     width: 750px;
     height: 20px;
     border: 2px solid #F2F2F2;
+    outline: none;
+    color: #4C4646;
 }
 
 .pesqui fieldset{
     border: none;
-    margin-top: 28px;
+    margin-top: 18px;
     width: 100%;
 }
 
@@ -83,8 +105,9 @@ body{
     margin-left: 17px;
     height: 25px;
     width: 170px;
-    border: 1px solid #4C4646;
-    background: #fff;    
+    border: 2px solid #f2f2f2;
+    background: #fff;   
+    outline: none; 
 }
 
 .form-pesquisa span{
@@ -98,7 +121,7 @@ body{
     margin-left: 17px;
     height: 25px;
     width: 170px;
-    border: 1px solid #f2f2f2;
+    border: 2px solid #f2f2f2;
 }
 
 .form-custo fieldset{
@@ -110,7 +133,7 @@ body{
     display: block;
     color: #4C4646;
     margin-top: 28px;
-    margin-left: 17px;
+    margin-left: 17px;    
 }
 
 .form-custo label{
@@ -122,11 +145,12 @@ body{
     height: 25px;
     margin-left: 16px;  
     border: 1px solid #F2F2F2;
+    outline: none;
 }
 
 .saida {
     float: right;
-    margin: 53px 18px
+    margin: 30px 30px;
 }
 
 .saida input{
