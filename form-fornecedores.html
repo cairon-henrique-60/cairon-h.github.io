@@ -27,12 +27,12 @@
           <li><img src="imagens/Caixa.svg"/>Caixa</li>
           <li><img src="imagens/Clientes.svg"/>Clientes</li>
           <li>
-            <div class="product-action">
+            <div id="product-action" type="button"  class="product-action">
             <img src="imagens/Produtos.svg"/>Produtos
             </div>
           </li>
           <li> 
-            <div id="btn-action" type="button" onclick="mostrarCampo()">
+            <div id="btn-action" type="button"  class="btn-action" >
             <img src="imagens/fornecedoresB.svg"/>Fornecedores
             </div>
           </li>
@@ -44,52 +44,59 @@
         </ul>
       </nav>
     
-    <div class="container">
-    <div class="pesquisaFornecedor">
       <div>
-         <h2 class="fornecedor2">Fornecedores</h2><br><br>
-        
-      </div>
-      <div >
-        <input class="textPesquisa" stype="text" id="textPesquisa" placeholder="Perquisar por..." />
-        <i id="lupa" class="fas fa-search"></i>
-        <button class="botaoPesquisar" >Pesquisar</button>
-        <i  id="search" class="fas fa-plus-circle"></i>     
-        <button button class="botaoNovo">Novo Fornecedor</button>
-      </div>
+            <div class="logotipo">
+              <img  src="imagens/logotipo.svg" alt="">
+          </div>
+        <div id="container" class="container">
+        <div class="pesquisaFornecedor">
+          <div>
+            <h2 class="fornecedor2">FORNECEDORES</h2>
+            
+          </div>
+
+            <form>
+              <input class="textPesquisa" stype="text" id="textPesquisa" placeholder="Perquisar por..." />
+              <i id="lupa" class="fas fa-search"></i>
+              <button class="botaoPesquisar" >Pesquisar</button>
+              <i  id="search" class="fas fa-plus-circle"></i>     
+              <input type="button"  onclick="mostrar('cadastroFornecedor')" id="botaoNovo" class="botaoNovo" value="Novo Fornecedor"/>
+            </form>
+        </div>
     </div>
-    <form>
-      <div class="cadastroFornecedor">
-          <h2 class="cadFornecedor">Cadastro de Fornecedores</h2>
+
+    <form onsubmit="return validar()">
+      <div id="cadastroFornecedor" class="cadastroFornecedor">
+          <h2 class="cadFornecedor">CADASTRO DE FORNECEDORES</h2>
           <hr><br>
           <div>
             <label>Razão Social*</label><br>
             <input class="inputMaior" type="text" name="razaoSocial" id="razaoSocial" required>
-          </div><br><br>
+          </div><br><br><br>
           <div>
             <label>Nome Fantasia</label><br>
             <input class="inputMaior" type="text" name="nomeFantasia" id="nomeFantasia">
-          </div><br><br>
+          </div><br><br><br>
           <div>
-            <label>CNPJ</label><br>
-            <input class="inputMenor" type="text" name="cnpj" id="cnpj" placeholder="00.000.000/0001-00">
+            <label oninput="return MascaraCNPJ();">CNPJ</label><br>
+            <input class="inputMenor" type="text" name="cnpj" pattern="\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2}" id="cnpj" placeholder="00.000.000/0001-00">
           </div>
           <div>
             <label>CPF</label><br>
-            <input class="inputMenor" type="text" name="cpf" id="cpf" placeholder="000.000.000-00">
+            <input class="inputMenor" type="text" name="cpf" id="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00">
           </div>
           <div>
             <label>Insc. Estadual</label><br>
-            <input class="inputMenor" type="text" name="inscEstadual" id="inscEstadual" placeholder="000.000.000.000">
+            <input class="inputMenor" type="text" name="inEstadual" id="inEstadual" placeholder="000.000.000.000">
           </div>
           <div>
             <label>Insc. Municipal</label><br>
-            <input class="inputMenor" type="text" name="inscMunicipal" id="inscMunicipal" placeholder="0000000000-0">
-          </div><br><br>
+            <input class="inputMenor" type="text" name="inMunicipal" id="inMunicipal" placeholder="0000000000-0">
+          </div><br><br><br>
           <div>
             <label>Endereço</label><br>
             <input class="inputMaior" class="inputMaior" type="text" name="endereco" id="endereco" >
-          </div><br><br>
+          </div><br><br><br>
           <div>
             <label>CEP</label><br>
             <input class="inputMenor" type="text" name="cep" id="cep" placeholder="89066-690">
@@ -105,43 +112,44 @@
           <div>
             <label>País</label><br>
             <input class="inputMenor" type="text" name="pais" id="pais" placeholder="Brasil">
-          </div><br><br>
+          </div><br><br><br>
           <div>
-            <label class="telefone">Telefone*<br>
-              <input type="tel" name="telefone1" id="telefone1" placeholder="+55 (47)9911411984" required>
-              <input type="tel" name="telefone2" id="telefone2" placeholder="+55 (47)9911411984">
-            </label>
+            <label>Telefone*</label><br>
+            <input class="inputTel" type="tel" name="telefone1" id="telefone1" pattern="[0,9]{8,9}" placeholder="+55 (47)9911411984" required>
+            <input type="tel" class="inputTel2" name="telefone2" id="telefone2" pattern="[0,9]{8,9}" placeholder="+55 (47)9911411984">
           </div>
           <div>
-            <label class="email">E-mail*<br>
-              <input type="email" name="email" id="email" placeholder="jacquemilke@gmail.com" required>
-            </label>
-          </div><br><br>
+            <label>E-mail*</label><br>
+            <input type="email" name="email" id="email" placeholder="jacquemilke@gmail.com" required>
+          </div><br><br><br>
           <button class="botaoSalvar" type="submit">Salvar</button>
-          <button class="botaoCancelar">Cancelar</button>
+          <input type="button" onclick="fechar('cadastroFornecedor')" id="botaoCancelar" class="botaoCancelar" value="Cancelar">
           
         </div>
     </div>
     </form>
     
     <!-- Formulario de produtos -->
-    <section class="cadastro-produtos">
-      <div class="pesquisa">
+    
+    <section id="cadastro-produtos" class="cadastro-produtos">
+      <div  class="pesquisa">
           <form  class="container-pesquisa">
-              <legend>Produtos</legend>
+              <h2>Produtos</h2><hr>
               <label>
                   <input class="pesq-produtos" type="text" placeholder="Pesquisar por" autofocus required>
               </label>
               <i id="lupa" class="fas fa-search"></i>
               <input  class="btn-pesquisar"  type="submit"value="pesquisar">  
               <i  id="search" class="fas fa-plus-circle"></i>        
-              <input class="novo-fonr" type="button" value="novo produto" >
+              <input id="btn-NovoProd" onclick="mostrar('container-cadastro')" class="novo-fonr" type="button" value="novo produto" >
           </form>
       </div>
+       </section>
 
+       <section id="container-cadastro"  class="cadastroProdutos">
       <div class="container-cadastro">
           <form class="form-cadastro">
-              <legend>cadastro de produtos</legend>
+            <h2> Cadastro de Produtos</h2><hr>
               <label>
                   <span>Descrição de Produtos</span>
                   <input class="description" type="text" maxlength="50" placeholder="maximo 50 caracters" required>
@@ -226,16 +234,18 @@
                   <label class="preco-venda" unit="%">
                       <span>Estoque Minino</span>
                       <input type="number" required>
-                  </label>
+                  </label><br><br><br>
                   <div class="saida">
-                      <input class="cancelar" type="reset" value="Cancelar">
-
                       <input class="salvar" type="submit" value="Salvar">
+                      <input class="cancelar" type="button" id="btn-Cancelar" onclick="fechar('container-cadastro')" value="Cancelar">
+
+                      
                   </div>
               </fieldset>
           </form>
       </div>                
-  </section>
+ </section>
+  </div>
   <script src="https://kit.fontawesome.com/562a71b37f.js" crossorigin="anonymous"></script>
   </body>
   <script src="https://kit.fontawesome.com/562a71b37f.js" crossorigin="anonymous"></script> 
