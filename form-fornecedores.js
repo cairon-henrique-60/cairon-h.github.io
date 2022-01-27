@@ -19,6 +19,27 @@ window.onload = function () {
       container2.style.display = "block";
     }
   });
+
+  var container = document.querySelector(".container");
+  btn.addEventListener("click", function () {
+    if (container.style.display === "block") {
+      container2.style.display = "none";
+    } 
+    else {
+      container.style.display == "block";
+    }
+  });
+
+  var container2 = document.querySelector(".cadastro-produtos");
+  btn2.addEventListener("click", function () {
+    if (container2.style.display === "block") {
+      container.style.display = "none";
+    } 
+    else {
+      container2.style.display === "block";
+    }
+  });
+  
 };
 
 function mostrar(id) {
@@ -31,6 +52,7 @@ function fechar(id) {
     document.getElementById(id).style.display = "block";
   }
 }
+
 
 function validar() {
   Fornecedor = new Object();

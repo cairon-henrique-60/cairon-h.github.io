@@ -71,9 +71,7 @@ nav {
 li {
   display: block;
   padding: 15px 5px;
-  border: solid 1px;
-  border-color: #c5bcbc;
-  
+  border: solid 1px #F2F2F2; 
 }
 
 li:hover {
@@ -124,7 +122,7 @@ li img {
 
 
 .fornecedor2 {
-  border-bottom: 1px solid #4c4646;
+  border-bottom: 1px solid #F2F2F2;
   margin: 10px 0px 0px -16px ;
   box-sizing: border-box;
   padding-left: 16px;
@@ -135,6 +133,7 @@ li img {
   height: 20px;
   margin: 30px -70px 0px 17px;
   outline: none;
+  border: 1px solid #F2F2F2;
 }
 
 .cadastroFornecedor {
@@ -144,10 +143,8 @@ li img {
   left: 383px;
   top: 332px;
   background: #ffffff;
-  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
   font-size: 16px;
   line-height: 18.75px;
-  color: #4c4646;
   padding-left: 20px;
   display: none;
 }
@@ -155,6 +152,7 @@ li img {
 .cadFornecedor {
   padding-bottom: 10px;
   padding-top: 10px;
+  border-bottom: 1px solid #F2F2F2;
 }
 
 .botaoCancelar {
@@ -219,28 +217,37 @@ li img {
   width: 960px;
   left: 400px;
   padding-left: 30px;
+  border: 1px solid #F2F2F2;
 }
 
 .inputMenor {
   width: 180px;
   left: 100px;
   padding-left: 16px;
+  border: 1px solid #F2F2F2;
   
 }
 
 .inputTel {
   padding:2px 4px;
   margin-right: 57px;
+  border: 1px solid #F2F2F2;
 }
 
 .inputTel2 {
   padding:2px 4px;
   margin-right: 25px;
+  border: 1px solid #F2F2F2;
 }
 
 .telefone input{
   padding:2px 4px;
   margin-right: 31px;
+  border: 1px solid #F2F2F2;
+}
+
+#email{
+  border: 1px solid #F2F2F2;
 }
 
 .email{
