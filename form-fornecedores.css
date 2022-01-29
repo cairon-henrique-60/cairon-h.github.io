@@ -229,8 +229,8 @@ li img {
 }
 
 .inputTel {
-  padding:2px 4px;
-  margin-right: 57px;
+  padding:2px 7px;
+  margin-right: 32px;
   border: 1px solid #F2F2F2;
 }
 
@@ -246,15 +246,16 @@ li img {
   border: 1px solid #F2F2F2;
 }
 
+.mail{
+  margin-left: -20px;
+}
+
 #email{
   border: 1px solid #F2F2F2;
+  padding: 2px 240px 2px 5px;
+  margin-left: -20px;
 }
 
-.email{
-  margin-left: -30px;
-}
-
-.email input{
- padding: 4px 230px 4px 5px;
- margin-left: -30px;
+#email label{
+  margin: 100px;
 }
