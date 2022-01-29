@@ -8,10 +8,10 @@
 
 .pesquisa {
   position: absolute;
-  width: 1017px;
+  width: 920px;
   height: 149px;
   left: 383px;
-  top: 133px;
+  top: 90px;
   background: #ffffff;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
   padding-left: 20px;
@@ -27,9 +27,10 @@
 }
 
 .pesq-produtos {
-  width: 74%;
+  width: 72%;
   height: 20px;
   margin: 30px -70px 0px 17px;
+  border: 1px solid #F2F2F2;
   outline: none;
 }
 
@@ -62,7 +63,7 @@
   background: #ffbe00;
   border: none;
   height: 24px;
-  width: 120px;
+  width: 130px;
   padding-left: 30px;
   text-transform: uppercase;
   box-sizing: content-box;
@@ -85,10 +86,10 @@
 
 .cadastroProdutos {
   position: absolute;
-  width: 1017px;
-  height: 633px;
+  width: 920px;
+  height: 450px;
   left: 383px;
-  top: 332px;
+  top: 280px;
   background: #ffffff;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
   font-size: 16px;
@@ -113,10 +114,11 @@
 
 .form-cadastro input {
   margin-left: 17px;
-  width: 95%;
+  width: 94%;
   height: 20px;
   border: 1px solid #272525;
   outline: none;
+  border: 1px solid #F2F2F2;
   color: #4c4646;
 }
 
@@ -137,9 +139,10 @@
 .form-pesquisa select {
   margin-left: 17px;
   height: 25px;
-  width: 212px;
+  width:200px;
   border: 1px solid #272525;
   background: #fff;
+  border: 1px solid #F2F2F2;
   outline: none;
 }
 
@@ -153,8 +156,8 @@
 .form-pesquisa input {
   margin-left: 17px;
   height: 20px;
-  width: 200px;
-  border: 1px solid #272525;
+  width:200px;
+  border: 1px solid #F2F2F2;
 }
 
 .custeio {
@@ -177,16 +180,16 @@
 }
 
 .form-custo input {
-  width: 210px;
-  height: 25px;
+  width: 200px;
+  height: 22px;
   margin-left: 16px;
-  border: 1px solid #272525;
+  border: 1px solid #F2F2F2;
   outline: none;
 }
 
 .saida {
   float: right;
-  margin: 30px 30px;
+  margin: 0px 17px;
 }
 
 .saida input {

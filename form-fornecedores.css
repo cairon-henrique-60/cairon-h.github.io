@@ -93,8 +93,8 @@ li img {
   position: absolute;
   width: 442px;
   height: 343px;
-  left: 663px;
-  top: 340px;
+  left: 643px;
+  top: 200px;
 }
 
 .container {
@@ -110,10 +110,10 @@ li img {
 
 .pesquisaFornecedor {
   position: absolute;
-  width: 1017px;
+  width: 920px;
   height: 149px;
   left: 383px;
-  top: 133px;
+  top: 90px;
   background: #ffffff;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
   padding-left: 20px;
@@ -129,7 +129,7 @@ li img {
 }
 
 .textPesquisa {
-  width: 74%;
+  width: 69%;
   height: 20px;
   margin: 30px -70px 0px 17px;
   outline: none;
@@ -138,10 +138,10 @@ li img {
 
 .cadastroFornecedor {
   position: absolute;
-  width: 1017px;
+  width: 920px;
   height: 633px;
   left: 383px;
-  top: 332px;
+  top: 280px;
   background: #ffffff;
   font-size: 16px;
   line-height: 18.75px;
@@ -214,7 +214,7 @@ li img {
 }
 
 .inputMaior {
-  width: 960px;
+  width: 850px;
   left: 400px;
   padding-left: 30px;
   border: 1px solid #F2F2F2;
