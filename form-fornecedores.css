@@ -74,7 +74,7 @@
     width: 220px;
     right: 0em;
     top: 14%;
-    bottom: -0.1%;
+    bottom: -0.5%;
     background: #ffffff;
     box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.25);
     box-sizing: content-box;
@@ -122,7 +122,7 @@
   .pesquisaFornecedor {
     position: absolute;
     width: 45%;
-    height: 25%;
+    height: 15%;
     left: 8%;
     top: 5.625em;
     background: #ffffff;
@@ -131,15 +131,15 @@
   }
   
   #lupa{
-    margin: 8% 0% 10% 30%;
+    margin: 10% 0% 5% 30%;
     display: inline-flex;
   }
 
   .fornecedor2 {
     border-bottom: 1px solid #F2F2F2;
-    margin: 10px 0px 0px -16px ;
+    margin: 10% 0%;
     box-sizing: border-box;
-    padding-left: 16px;
+    font-size: 80%;
   }
   
   .textPesquisa {
@@ -198,34 +198,34 @@
   }
   
   .botaoPesquisar {
-    height: 30px;
+    height: 28px;
     background: #001470;
     color: #fff;
     border: none;
     border-radius: 100px;
-    margin: -20% 26% 0%;
+    margin: -17% 26% 0%;
     display: block;
     color: transparent;
     font-size: 0%;
     cursor: pointer;
-    width: 13.5%;    
+    width: 17%;    
   }
   
   .botaoNovo {
     background: #ffbe00;
     border: none;
-    height: 2.3em;
-    width: 13%;
+    height: 2.1em;
+    width: 17%;
     color: transparent;
     border-radius: 150%;
     display: flex;
-    margin: 14% 53% 30%;
+    margin: 11.5% 53% 30%;
     cursor: pointer;
   }
 
   #search{
     display: flex;
-    margin: -10% 56% -24% ;
+    margin: -14% 56% -25% ;
   }
   
   .cadastroFornecedor div {
