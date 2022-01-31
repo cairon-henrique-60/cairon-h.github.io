@@ -121,13 +121,15 @@
   
   .pesquisaFornecedor {
     position: absolute;
-    width: 45%;
-    height: 15%;
+    width: 19em;
+    height: 13em;
     left: 8%;
+    right: 8%;
     top: 5.625em;
     background: #ffffff;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
     padding-left: 20px;
+    box-sizing: content-box;
   }
   
   #lupa{
@@ -137,7 +139,7 @@
 
   .fornecedor2 {
     border-bottom: 1px solid #F2F2F2;
-    margin: 10% 0%;
+    margin: 10% 0% 2em;
     box-sizing: border-box;
     font-size: 80%;
   }
@@ -145,17 +147,17 @@
   .textPesquisa {
     width: 87%;
     height: 20px;
-    margin: 10px 0px 5px 0px;
+    margin: 0px;
     outline: none;
     border: 1px solid #F2F2F2;
   }
   
   .cadastroFornecedor {
     position: absolute;
-    width: 87%;
-    height: 120%;
+    width: 62%;
+    height: 210%;
     left: 9%;
-    top: 280px;
+    top: 320px;
     background: #ffffff;
     font-size: 16px;
     line-height: 18.75px;
@@ -164,9 +166,14 @@
   }
   
   .cadFornecedor {
-    padding-bottom:10px;
+    padding-bottom:1px;
     padding-top: 10px;
+    font-size: 1em;
     border-bottom: 1px solid #F2F2F2;
+  }
+
+  .dados{
+    height: 200%;
   }
   
   .botaoCancelar {
@@ -176,6 +183,7 @@
     height: 28px;
     float: right;
     margin-right: 30%;
+    margin-bottom: 2em;
     border: none;
     text-transform: uppercase;
     display: block;
@@ -202,35 +210,34 @@
     background: #001470;
     color: #fff;
     border: none;
-    border-radius: 100px;
-    margin: -17% 26% 0%;
+    margin: -12% auto 0%;
     display: block;
-    color: transparent;
-    font-size: 0%;
     cursor: pointer;
-    width: 17%;    
+    width: 10em;    
   }
   
   .botaoNovo {
     background: #ffbe00;
     border: none;
     height: 2.1em;
-    width: 17%;
-    color: transparent;
-    border-radius: 150%;
+    width: 11.5em;
     display: flex;
-    margin: 11.5% 53% 30%;
+    margin: 3em auto  ;
     cursor: pointer;
+    padding-left: 3em;
+    
+    
   }
 
   #search{
     display: flex;
-    margin: -14% 56% -25% ;
+    margin: 1em 0em -4em 5.5em;
+    box-sizing: border-box;
   }
   
   .cadastroFornecedor div {
     display: inline-block;
-    padding-right: 32px;
+    padding-right: 34px;
   }
   
   .inputMaior {
@@ -356,7 +363,7 @@
     position: absolute;
     height: 424px;
     width: 320px;
-    right: -0.5em;
+    right: 0% ;
     top: 14%;
     bottom: -0.2%;
     background: #ffffff;
