@@ -73,8 +73,8 @@
     height: 424px;
     width: 220px;
     right: 0em;
-    top: 13.5%;
-    bottom: -0.1%;
+    top: 14%;
+    bottom: -0.5%;
     background: #ffffff;
     box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.25);
     box-sizing: content-box;
@@ -122,7 +122,7 @@
   .pesquisaFornecedor {
     position: absolute;
     width: 45%;
-    height: 25%;
+    height: 15%;
     left: 8%;
     top: 5.625em;
     background: #ffffff;
@@ -131,15 +131,15 @@
   }
   
   #lupa{
-    margin: 8% 0% 10% 30%;
+    margin: 10% 0% 5% 30%;
     display: inline-flex;
   }
 
   .fornecedor2 {
     border-bottom: 1px solid #F2F2F2;
-    margin: 10px 0px 0px -16px ;
+    margin: 10% 0%;
     box-sizing: border-box;
-    padding-left: 16px;
+    font-size: 80%;
   }
   
   .textPesquisa {
@@ -152,9 +152,9 @@
   
   .cadastroFornecedor {
     position: absolute;
-    width: 920px;
-    height: 633px;
-    left: 383px;
+    width: 87%;
+    height: 120%;
+    left: 9%;
     top: 280px;
     background: #ffffff;
     font-size: 16px;
@@ -175,7 +175,7 @@
     width: 146px;
     height: 28px;
     float: right;
-    margin-right: 20px;
+    margin-right: 30%;
     border: none;
     text-transform: uppercase;
     display: block;
@@ -188,7 +188,7 @@
     width: 146px;
     height: 28px;
     float: right;
-    margin-right: 36px;
+    margin-right: 30%;
     margin-bottom: 15px;
     justify-items: right;
     text-transform: uppercase;
@@ -198,34 +198,34 @@
   }
   
   .botaoPesquisar {
-    height: 30px;
+    height: 28px;
     background: #001470;
     color: #fff;
     border: none;
     border-radius: 100px;
-    margin: -20% 26% 0%;
+    margin: -17% 26% 0%;
     display: block;
     color: transparent;
     font-size: 0%;
     cursor: pointer;
-    width: 13.5%;    
+    width: 17%;    
   }
   
   .botaoNovo {
     background: #ffbe00;
     border: none;
-    height: 2.3em;
-    width: 13%;
+    height: 2.1em;
+    width: 17%;
     color: transparent;
     border-radius: 150%;
     display: flex;
-    margin: 14% 53% 30%;
+    margin: 11.5% 53% 30%;
     cursor: pointer;
   }
 
   #search{
     display: flex;
-    margin: -10% 56% -24% ;
+    margin: -14% 56% -25% ;
   }
   
   .cadastroFornecedor div {
@@ -234,29 +234,32 @@
   }
   
   .inputMaior {
-    width: 850px;
+    width: 110%;
     left: 400px;
     padding-left: 30px;
     border: 1px solid #F2F2F2;
   }
   
   .inputMenor {
-    width: 175px;
+    width: 125%;
     left: 100px;
+    margin-bottom: 10px;
     padding-left: 16px;
     border: 1px solid #F2F2F2;
     
   }
   
   .inputTel {
-    padding:2px 7px;
+    padding:2px 17%;
     margin-right: 32px;
+    margin-bottom: 10px;
     border: 1px solid #F2F2F2;
   }
   
   .inputTel2 {
-    padding:2px 4px;
-    margin-right: 25px;
+    padding:2px 33% 2px 1%;
+    margin-right: 2px;
+    margin-bottom: 10px;
     border: 1px solid #F2F2F2;
   }
   
@@ -267,13 +270,13 @@
   }
   
   .mail{
-    margin-left: -20px;
+    margin-left: 10px;
   }
   
   #email{
     border: 1px solid #F2F2F2;
-    padding: 2px 240px 2px 5px;
-    margin-left: -20px;
+    padding: 2px 50% 2px 5px;
+    margin-left: 5px;
   }
    
 }
@@ -353,9 +356,9 @@
     position: absolute;
     height: 424px;
     width: 320px;
-    right: 0em;
-    top: 13.5%;
-    bottom: -0.1%;
+    right: -0.5em;
+    top: 14%;
+    bottom: -0.2%;
     background: #ffffff;
     box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.25);
     box-sizing: content-box;
@@ -433,7 +436,7 @@
   .cadastroFornecedor {
     position: absolute;
     width: 920px;
-    height: 633px;
+    height: 100%;
     left: 383px;
     top: 280px;
     background: #ffffff;
