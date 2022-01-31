@@ -1,8 +1,830 @@
+@media (min-width: 350px) and (max-width: 550px){
+  body {
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;0,900;1,300;1,700;1,900&display=swap');
+    font-family: 'Roboto', sans-serif;
+    background: #eeeded;
+    margin: 0%;
+    padding: 0%;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    max-height: 80%;
+    height: 100%;
+    background-image: url(imagens/logo\,gfinest.svg);
+    background-repeat: no-repeat;
+    background-position: center 300px;
+    background-size: 167px 214px;
+  }
+  
+  
+  h2 {
+    color: #001470;
+  }
+
+  .cabecalho {
+    background: #001470;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 91.4%;
+    border: none;
+    padding-bottom: 60px;
+  }
+  
+  .logo {
+    margin-left: 1.5em;
+    max-width: 10%;
+    margin-top: 1em;
+    display: inline-flex;
+  }
+
+  .logo img{
+    width: 20.5em;
+    height: 2em;
+  }
+  
+  #scroll{
+    display: flex;
+    flex-direction: inline-flex;
+    font-size: 1.4em;
+    color: #fff;
+    margin-left: 90%;
+    margin-top: -35px !important;
+  }
+  
+  
+  .usuario {
+    display: none;
+  }
+  
+  .fotoUsuario {
+    display: none;
+  }
+  
+  .seta {
+    display: none;
+  }
+  
+  nav {
+    position: absolute;
+    height: 424px;
+    width: 220px;
+    right: 0em;
+    top: 13.5%;
+    bottom: -0.1%;
+    background: #ffffff;
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.25);
+    box-sizing: content-box;
+  }
+  
+  li {
+    display: block;
+    padding: 4px 5px;
+    border: solid 1px #F2F2F2; 
+    margin-left: -40px;
+    box-sizing: content-box;
+  }
+  
+  li:hover {
+    color: #ffffff;
+    background-color: #001470;
+    cursor: pointer;
+   
+  }
+  
+  li img {
+    width: 25px;
+    height: 25px;
+    margin-left: 15px;
+    margin-right: 5px;
+    color: #001470;
+  }
+  
+  .logotipo {
+    display: none;
+  }
+
+  
+  
+  .container {
+    display: none;
+    max-width: 100%;
+    width: 100%; 
+  }
+  
+  .btn-action {
+    display: block;
+  }
+  
+  .pesquisaFornecedor {
+    position: absolute;
+    width: 45%;
+    height: 25%;
+    left: 8%;
+    top: 5.625em;
+    background: #ffffff;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    padding-left: 20px;
+  }
+  
+  #lupa{
+    margin: 8% 0% 10% 30%;
+    display: inline-flex;
+  }
+
+  .fornecedor2 {
+    border-bottom: 1px solid #F2F2F2;
+    margin: 10px 0px 0px -16px ;
+    box-sizing: border-box;
+    padding-left: 16px;
+  }
+  
+  .textPesquisa {
+    width: 87%;
+    height: 20px;
+    margin: 10px 0px 5px 0px;
+    outline: none;
+    border: 1px solid #F2F2F2;
+  }
+  
+  .cadastroFornecedor {
+    position: absolute;
+    width: 920px;
+    height: 633px;
+    left: 383px;
+    top: 280px;
+    background: #ffffff;
+    font-size: 16px;
+    line-height: 18.75px;
+    padding-left: 20px;
+    display: none;
+  }
+  
+  .cadFornecedor {
+    padding-bottom:10px;
+    padding-top: 10px;
+    border-bottom: 1px solid #F2F2F2;
+  }
+  
+  .botaoCancelar {
+    background-color: #700000;
+    color: #ffffff;
+    width: 146px;
+    height: 28px;
+    float: right;
+    margin-right: 20px;
+    border: none;
+    text-transform: uppercase;
+    display: block;
+    cursor: pointer;
+  }
+  
+  .botaoSalvar {
+    background-color: #001470;
+    color: #ffffff;
+    width: 146px;
+    height: 28px;
+    float: right;
+    margin-right: 36px;
+    margin-bottom: 15px;
+    justify-items: right;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    
+  }
+  
+  .botaoPesquisar {
+    height: 30px;
+    background: #001470;
+    color: #fff;
+    border: none;
+    border-radius: 100px;
+    margin: -20% 26% 0%;
+    display: block;
+    color: transparent;
+    font-size: 0%;
+    cursor: pointer;
+    width: 13.5%;    
+  }
+  
+  .botaoNovo {
+    background: #ffbe00;
+    border: none;
+    height: 2.3em;
+    width: 13%;
+    color: transparent;
+    border-radius: 150%;
+    display: flex;
+    margin: 14% 53% 30%;
+    cursor: pointer;
+  }
+
+  #search{
+    display: flex;
+    margin: -10% 56% -24% ;
+  }
+  
+  .cadastroFornecedor div {
+    display: inline-block;
+    padding-right: 32px;
+  }
+  
+  .inputMaior {
+    width: 850px;
+    left: 400px;
+    padding-left: 30px;
+    border: 1px solid #F2F2F2;
+  }
+  
+  .inputMenor {
+    width: 175px;
+    left: 100px;
+    padding-left: 16px;
+    border: 1px solid #F2F2F2;
+    
+  }
+  
+  .inputTel {
+    padding:2px 7px;
+    margin-right: 32px;
+    border: 1px solid #F2F2F2;
+  }
+  
+  .inputTel2 {
+    padding:2px 4px;
+    margin-right: 25px;
+    border: 1px solid #F2F2F2;
+  }
+  
+  .telefone input{
+    padding:2px 4px;
+    margin-right: 31px;
+    border: 1px solid #F2F2F2;
+  }
+  
+  .mail{
+    margin-left: -20px;
+  }
+  
+  #email{
+    border: 1px solid #F2F2F2;
+    padding: 2px 240px 2px 5px;
+    margin-left: -20px;
+  }
+   
+}
+
+/* tela entre 551px a 700px  */
+@media (min-width: 551px) and (max-width: 700px){
+  body {
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;0,900;1,300;1,700;1,900&display=swap');
+    font-family: 'Roboto', sans-serif;
+    background: #eeeded;
+    margin: 0%;
+    padding: 0%;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    max-height: 80%;
+    height: 100%;
+    background-image: url(imagens/logo\,gfinest.svg);
+    background-repeat: no-repeat;
+    background-position: center 300px;
+    background-size: 267px 250px;
+  }
+  
+  
+  h2 {
+    color: #001470;
+  }
+
+  .cabecalho {
+    background: #001470;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 91.4%;
+    border: none;
+    padding-bottom: 60px;
+  }
+  
+  .logo {
+    margin-left: 1.5em;
+    max-width: 10%;
+    margin-top: 1em;
+    display: inline-flex;
+  }
+
+  .logo img{
+    width: 20.5em;
+    height: 2em;
+  }
+  
+  #scroll{
+    display: flex;
+    flex-direction: inline-flex;
+    font-size: 1.4em;
+    color: #fff;
+    margin-left: 90%;
+    margin-top: -35px !important;
+  }
+  
+  
+  .usuario {
+    display: none;
+  }
+  
+  .fotoUsuario {
+    display: none;
+  }
+  
+  .seta {
+    display: none;
+  }
+  
+  nav {
+    position: absolute;
+    height: 424px;
+    width: 320px;
+    right: 0em;
+    top: 13.5%;
+    bottom: -0.1%;
+    background: #ffffff;
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.25);
+    box-sizing: content-box;
+  }
+  
+  li {
+    display: block;
+    padding: 4px 5px;
+    border: solid 1px #F2F2F2; 
+    margin-left: -40px;
+    box-sizing: content-box;
+    color: #4D4646;
+  }
+  
+  li:hover {
+    color: #ffffff;
+    background-color: #001470;
+    cursor: pointer;
+   
+  }
+  
+  li img {
+    width: 25px;
+    height: 25px;
+    margin-left: 15px;
+    margin-right: 5px;
+    color: #001470;
+  }
+  
+  .logotipo {
+    display: none;
+  }
+
+  
+  
+  .container {
+    display: none;
+    max-width: 100%;
+    width: 100%;
+    
+  }
+  
+  .btn-action {
+    display: block;
+  }
+  
+  .pesquisaFornecedor {
+    position: absolute;
+    width: 920px;
+    height: 149px;
+    left: 383px;
+    top: 90px;
+    background: #ffffff;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    padding-left: 20px;
+    
+  }
+  
+  
+  .fornecedor2 {
+    border-bottom: 1px solid #F2F2F2;
+    margin: 10px 0px 0px -16px ;
+    box-sizing: border-box;
+    padding-left: 16px;
+  }
+  
+  .textPesquisa {
+    width: 69%;
+    height: 20px;
+    margin: 30px -70px 0px 17px;
+    outline: none;
+    border: 1px solid #F2F2F2;
+  }
+  
+  .cadastroFornecedor {
+    position: absolute;
+    width: 920px;
+    height: 633px;
+    left: 383px;
+    top: 280px;
+    background: #ffffff;
+    font-size: 16px;
+    line-height: 18.75px;
+    padding-left: 20px;
+    display: none;
+  }
+  
+  .cadFornecedor {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid #F2F2F2;
+  }
+  
+  .botaoCancelar {
+    background-color: #700000;
+    color: #ffffff;
+    width: 146px;
+    height: 28px;
+    float: right;
+    margin-right: 20px;
+    border: none;
+    text-transform: uppercase;
+    display: block;
+    cursor: pointer;
+   
+  }
+  
+  .botaoSalvar {
+    background-color: #001470;
+    color: #ffffff;
+    width: 146px;
+    height: 28px;
+    float: right;
+    margin-right: 36px;
+    margin-bottom: 15px;
+    justify-items: right;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    
+  }
+  
+  .botaoPesquisar {
+    height: 24px;
+    width: 90px;
+    background: #001470;
+    color: #fff;
+    border: none;
+    margin-right: 15px;
+    padding-left: 30px;
+    text-transform: uppercase;
+    box-sizing: content-box;
+    cursor: pointer;
+  }
+  
+  .botaoNovo {
+    background: #ffbe00;
+    border: none;
+    height: 24px;
+    width: 150px;
+    padding-left: 30px;
+    text-transform: uppercase;
+    box-sizing: content-box;
+    cursor: pointer;
+  }
+  
+  .cadastroFornecedor div {
+    display: inline-block;
+    padding-right: 32px;
+  }
+  
+  .inputMaior {
+    width: 850px;
+    left: 400px;
+    padding-left: 30px;
+    border: 1px solid #F2F2F2;
+  }
+  
+  .inputMenor {
+    width: 175px;
+    left: 100px;
+    padding-left: 16px;
+    border: 1px solid #F2F2F2;
+    
+  }
+  
+  .inputTel {
+    padding:2px 7px;
+    margin-right: 32px;
+    border: 1px solid #F2F2F2;
+  }
+  
+  .inputTel2 {
+    padding:2px 4px;
+    margin-right: 25px;
+    border: 1px solid #F2F2F2;
+  }
+  
+  .telefone input{
+    padding:2px 4px;
+    margin-right: 31px;
+    border: 1px solid #F2F2F2;
+  }
+  
+  .mail{
+    margin-left: -20px;
+  }
+  
+  #email{
+    border: 1px solid #F2F2F2;
+    padding: 2px 240px 2px 5px;
+    margin-left: -20px;
+  }
+}
+
+/* tela entre 701px a 999px */
+@media (min-width: 701px) and (max-width: 999px){
+  * {
+    margin: 0;
+    padding: 0;
+  }
+   
+  body {
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;0,900;1,300;1,700;1,900&display=swap');
+    font-family: 'Roboto', sans-serif;
+    background: #eeeded;
+    margin: 0%;
+    padding: 0%;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    max-height: 100%;
+    background-image: url(imagens/logo\,gfinest.svg);
+    background-repeat: no-repeat;
+    background-position: center 300px;
+    background-size: 367px 250px;
+  }
+  
+  
+  h2 {
+    color: #001470;
+  }
+  
+  .cabecalho {
+    background: #001470;
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 91.4%;
+    border: none;
+  }
+  
+  .logo {
+    margin-left: 1em;
+    max-width: 10%;
+    display: inline-flex;
+    margin-top: 5px;
+  }
+  
+  #scroll{
+    display: none;
+  }
+  
+  
+  .usuario {
+    float: right;
+    display: flex;
+    margin-top: 10px;
+    color: #ffffff;
+    align-items: center;
+  }
+  
+  .fotoUsuario {
+    margin-right: 10px;
+  }
+  
+  .seta {
+    margin-left: 10px;
+    margin-right: 15px;
+  }
+  
+  nav {
+    position: absolute;
+    height: 100%;
+    width: 351px;
+    left: 0%;
+    right: 75.62%;
+    top: 8.75%;
+    bottom: -0.1%;
+    background: #ffffff;
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.25);
+    
+  }
+  
+  li {
+    display: block;
+    padding: 15px 5px;
+    border: solid 1px #F2F2F2; 
+  }
+  
+  li:hover {
+    color: #ffffff;
+    background-color: #001470;
+    cursor: pointer;
+   
+  }
+  
+  li img {
+    width: 25px;
+    height: 25px;
+    margin-left: 15px;
+    margin-right: 5px;
+    color: #001470;
+  }
+  
+  .logotipo {
+    display: none;
+  }
+  
+  .container {
+    display: none;
+    max-width: 100%;
+    width: 100%;
+    
+  }
+  
+  .btn-action {
+    display: block;
+  }
+  
+  .pesquisaFornecedor {
+    position: absolute;
+    width: 920px;
+    height: 149px;
+    left: 383px;
+    top: 90px;
+    background: #ffffff;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+    padding-left: 20px;
+    
+  }
+  
+  
+  .fornecedor2 {
+    border-bottom: 1px solid #F2F2F2;
+    margin: 10px 0px 0px -16px ;
+    box-sizing: border-box;
+    padding-left: 16px;
+  }
+  
+  .textPesquisa {
+    width: 69%;
+    height: 20px;
+    margin: 30px -70px 0px 17px;
+    outline: none;
+    border: 1px solid #F2F2F2;
+  }
+  
+  .cadastroFornecedor {
+    position: absolute;
+    width: 920px;
+    height: 633px;
+    left: 383px;
+    top: 280px;
+    background: #ffffff;
+    font-size: 16px;
+    line-height: 18.75px;
+    padding-left: 20px;
+    display: none;
+  }
+  
+  .cadFornecedor {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid #F2F2F2;
+  }
+  
+  .botaoCancelar {
+    background-color: #700000;
+    color: #ffffff;
+    width: 146px;
+    height: 28px;
+    float: right;
+    margin-right: 20px;
+    border: none;
+    text-transform: uppercase;
+    display: block;
+    cursor: pointer;
+   
+  }
+  
+  .botaoSalvar {
+    background-color: #001470;
+    color: #ffffff;
+    width: 146px;
+    height: 28px;
+    float: right;
+    margin-right: 36px;
+    margin-bottom: 15px;
+    justify-items: right;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    
+  }
+  
+  .botaoPesquisar {
+    height: 24px;
+    width: 90px;
+    background: #001470;
+    color: #fff;
+    border: none;
+    margin-right: 15px;
+    padding-left: 30px;
+    text-transform: uppercase;
+    box-sizing: content-box;
+    cursor: pointer;
+  }
+  
+  .botaoNovo {
+    background: #ffbe00;
+    border: none;
+    height: 24px;
+    width: 150px;
+    padding-left: 30px;
+    text-transform: uppercase;
+    box-sizing: content-box;
+    cursor: pointer;
+  }
+  
+  .cadastroFornecedor div {
+    display: inline-block;
+    padding-right: 32px;
+  }
+  
+  .inputMaior {
+    width: 850px;
+    left: 400px;
+    padding-left: 30px;
+    border: 1px solid #F2F2F2;
+  }
+  
+  .inputMenor {
+    width: 175px;
+    left: 100px;
+    padding-left: 16px;
+    border: 1px solid #F2F2F2;
+    
+  }
+  
+  .inputTel {
+    padding:2px 7px;
+    margin-right: 32px;
+    border: 1px solid #F2F2F2;
+  }
+  
+  .inputTel2 {
+    padding:2px 4px;
+    margin-right: 25px;
+    border: 1px solid #F2F2F2;
+  }
+  
+  .telefone input{
+    padding:2px 4px;
+    margin-right: 31px;
+    border: 1px solid #F2F2F2;
+  }
+  
+  .mail{
+    margin-left: -20px;
+  }
+  
+  #email{
+    border: 1px solid #F2F2F2;
+    padding: 2px 240px 2px 5px;
+    margin-left: -20px;
+  }
+}
+
+/* tela acima de 1000px */
+@media screen and (min-width: 1000px){
 * {
   margin: 0;
   padding: 0;
 }
-
+ 
 body {
   @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;0,900;1,300;1,700;1,900&display=swap');
   font-family: 'Roboto', sans-serif;
@@ -16,6 +838,7 @@ body {
   bottom: 0%;
   max-height: 100%;
 }
+
 
 h2 {
   color: #001470;
@@ -33,10 +856,15 @@ h2 {
 
 .logo {
   margin-left: 1em;
-  max-width: 30%;
+  max-width: 10%;
   display: inline-flex;
   margin-top: 5px;
 }
+
+#scroll{
+  display: none;
+}
+
 
 .usuario {
   float: right;
@@ -61,7 +889,7 @@ nav {
   width: 351px;
   left: 0%;
   right: 75.62%;
-  top: 8.59%;
+  top: 8.75%;
   bottom: -0.1%;
   background: #ffffff;
   box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.25);
@@ -254,4 +1082,5 @@ li img {
   border: 1px solid #F2F2F2;
   padding: 2px 240px 2px 5px;
   margin-left: -20px;
+}
 }
