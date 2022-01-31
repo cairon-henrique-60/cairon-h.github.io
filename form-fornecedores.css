@@ -154,7 +154,7 @@
   
   .cadastroFornecedor {
     position: absolute;
-    width: 62%;
+    width: 19em;
     height: 210%;
     left: 9%;
     top: 320px;
@@ -241,14 +241,14 @@
   }
   
   .inputMaior {
-    width: 110%;
+    width: 17em;
     left: 400px;
     padding-left: 30px;
     border: 1px solid #F2F2F2;
   }
   
   .inputMenor {
-    width: 125%;
+    width: 18em;
     left: 100px;
     margin-bottom: 10px;
     padding-left: 16px;
@@ -257,14 +257,14 @@
   }
   
   .inputTel {
-    padding:2px 17%;
+    padding:2px 3em;
     margin-right: 32px;
     margin-bottom: 10px;
     border: 1px solid #F2F2F2;
   }
   
   .inputTel2 {
-    padding:2px 33% 2px 1%;
+    padding:2px 5.8em 2px 1%;
     margin-right: 2px;
     margin-bottom: 10px;
     border: 1px solid #F2F2F2;
@@ -282,7 +282,7 @@
   
   #email{
     border: 1px solid #F2F2F2;
-    padding: 2px 50% 2px 5px;
+    padding: 2px 5.5em 2px 5px;
     margin-left: 5px;
   }
    
