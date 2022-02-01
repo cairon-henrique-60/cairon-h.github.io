@@ -963,22 +963,25 @@ li img:hover {
 .pesquisaFornecedor {
   position: absolute;
   width: 1017px;
-  height: 149px;
+  height: 129px;
   left: 363px;
-  top: 90px;
+  top: 80px;
   background: #ffffff;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
   padding-left: 20px;
-  padding-top: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   
 }
 
 
 .fornecedor2 {
   border-bottom: 1px solid #F2F2F2;
-  margin: 10px 0px 0px -16px ;
+  margin: 0 -8px ;
   box-sizing: border-box;
   padding-left: 16px;
+  padding-bottom: 16px;
+  padding-top: 5px;
 }
 
 .textPesquisa {
@@ -987,26 +990,32 @@ li img:hover {
   margin: 35px -70px 0px 5px;
   outline: none;
   border: 1px solid #F2F2F2;
+  width: 740px;
+  padding-top: -10px;
 }
 
 .cadastroFornecedor {
   position: absolute;
   width: 1017px;
-  height: 633px;
+  height: 500px;
   left: 363px;
-  top: 280px;
+  top: 250px;
   background: #ffffff;
   font-size: 16px;
   line-height: 18.75px;
   padding-left: 20px;
   padding-top: 16px;
   display: none;
+  
 }
 
 .cadFornecedor {
-  padding-bottom: 5px;
+  padding-bottom: 16px;
   padding-top: 10px;
   border-bottom: 1px solid #F2F2F2;
+  margin-bottom: 16px;
+  
+
 }
 
 .botaoCancelar {
@@ -1016,10 +1025,12 @@ li img:hover {
   height: 28px;
   float: right;
   margin-right: 20px;
+  margin-top: -10px;
   border: none;
   text-transform: uppercase;
   display: block;
   cursor: pointer;
+
  
 }
 
@@ -1030,11 +1041,12 @@ li img:hover {
   height: 28px;
   float: right;
   margin-right: 36px;
-  margin-bottom: 15px;
+  margin-top: -10px;
   justify-items: right;
   text-transform: uppercase;
   border: none;
   cursor: pointer;
+
   
 }
 
@@ -1066,6 +1078,8 @@ li img:hover {
 .cadastroFornecedor div {
   display: inline-block;
   padding-right: 32px;
+  margin-top: -16px;
+  margin-bottom: -60px;
 }
 
 .inputMaior {
