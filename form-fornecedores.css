@@ -976,7 +976,7 @@
     width: 1017px;
     height: 500px;
     left: 363px;
-    top: 260px;
+    top: 80px;
     background: #ffffff;
     font-size: 16px;
     line-height: 18.75px;
@@ -1056,7 +1056,6 @@
     width: 950px;
     left: 400px;
     height: 28px;
-    padding-left: 30px;
     border: 1px solid #f2f2f2;
     outline: none;
   }
@@ -1065,7 +1064,6 @@
     width: 200px;
     left: 100px;
     height: 28px;
-    padding-left: 16px;
     border: 1px solid #f2f2f2;
     outline: none;
   }
