@@ -13,11 +13,11 @@
     <fieldset class="cabecalho">
       
         <label class="logo">
-          <img src="imagens/Logo.svg" alt="Logo da empresa" width="260px" height="52px"/>
+          <img class="imgLogo" src="imagens/Logo.svg" alt="Logo da empresa" width="280px" height="40px" style="margin-top: 8%; "/>
         </label>
         <i id="scroll" class="fas fa-align-justify"></i>
         <label class="usuario">
-        <img class="fotoUsuario" src="imagens/fotoUsuario.svg" alt="Imagem de perfil do Usuario" width="40px" height="40px"/>Jacqueline Milke | Administrador
+        <img class="fotoUsuario" src="imagens/fotoUsuario.svg" alt="Imagem de perfil do Usuario" width="40px" height="40px" />Jacqueline Milke | Administrador
         <img class="seta" src="imagens/mostrarInformacoes.svg"width="10px"height="10px"/>
         </label>
     </fieldset>
@@ -80,19 +80,19 @@
           </div><br><br><br>
           <div>
             <label oninput="return MascaraCNPJ();">CNPJ</label><br>
-            <input class="inputMenor" type="text" name="cnpj" pattern="\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2}" id="cnpj" placeholder="00.000.000/0001-00">
+            <input class="inputMenor" type="text" name="cnpj" pattern="\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2}" id="cnpj">
           </div>
           <div>
             <label>CPF</label><br>
-            <input class="inputMenor" type="text" name="cpf" id="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00">
+            <input class="inputMenor" type="text" name="cpf" id="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
           </div>
           <div>
             <label>Insc. Estadual</label><br>
-            <input class="inputMenor" type="text" name="inEstadual" id="inEstadual" placeholder="000.000.000.000">
+            <input class="inputMenor" type="text" name="inEstadual" id="inEstadual">
           </div>
           <div>
             <label>Insc. Municipal</label><br>
-            <input class="inputMenor" type="text" name="inMunicipal" id="inMunicipal" placeholder="0000000000-0">
+            <input class="inputMenor" type="text" name="inMunicipal" id="inMunicipal">
           </div><br><br><br>
           <div>
             <label>Endereço</label><br>
@@ -100,29 +100,29 @@
           </div><br><br><br>
           <div>
             <label>CEP</label><br>
-            <input class="inputMenor" type="text" name="cep" id="cep" placeholder="00000-000">
+            <input class="inputMenor" type="text" name="cep" id="cep">
           </div>
           <div>
             <label>Cidade</label><br>
-            <input class="inputMenor" type="text" name="cidade" id="cidade" placeholder="">
+            <input class="inputMenor" type="text" name="cidade" id="cidade">
           </div>
           <div>
             <label>Estado</label><br>
-            <input class="inputMenor" type="text" name="estado" id="estado" placeholder="">
+            <input class="inputMenor" type="text" name="estado" id="estado">
           </div>
           <div>
             <label>País</label><br>
-            <input class="inputMenor" type="text" name="pais" id="pais" placeholder="">
+            <input class="inputMenor" type="text" name="pais" id="pais">
           </div><br><br><br>
           <div>
             <label>Telefone*</label><br>
-            <input class="inputTel" type="tel" name="telefone1" id="telefone1" pattern="[0,9]{8,9}" placeholder="" required>
-            <input type="tel" class="inputTel2" name="telefone2" id="telefone2" pattern="[0,9]{8,9}" placeholder="Telefone 2">
+            <input class="inputTel" type="tel" name="telefone1" id="telefone1" pattern="[0,9]{8,9}" required>
+            <input type="tel" class="inputTel2" name="telefone2" id="telefone2" pattern="[0,9]{8,9}">
           </div>
           <div>
             <label class=
             "mail">E-mail*</label><br>
-            <input type="email" name="email" id="email" placeholder="" required>
+            <input type="email" name="email" id="email" required>
           </div><br><br><br>
           <button class="botaoSalvar" type="submit">Salvar</button>
           <input type="button" onclick="fechar('cadastroFornecedor')" id="botaoCancelar" class="botaoCancelar" value="Cancelar">

@@ -631,15 +631,17 @@
   
   nav {
     position: absolute;
-    height: 100%;
-    width: 351px;
+    height: 481px;
+    width: 280px;
     left: 0%;
     right: 75.62%;
-    top: 8.75%;
+    top: 9%;
     bottom: -0.1%;
+    box-sizing: content-box;
     background: #ffffff;
     box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.25);
-    
+    padding-top: 1.5%; 
+    padding-bottom: 2.5%;
   }
   
   li {
@@ -859,12 +861,12 @@ h2 {
   left: 0%;
   right: 0%;
   top: 0%;
-  bottom: 91.4%;
+  bottom: 91.2%;
   border: none;
 }
 
 .logo {
-  margin-left: 1em;
+  margin-left: 3em;
   max-width: 10%;
   display: inline-flex;
   margin-top: 5px;
@@ -878,13 +880,14 @@ h2 {
 .usuario {
   float: right;
   display: flex;
-  margin-top: 10px;
+  margin-top: 14px;
   color: #ffffff;
   align-items: center;
+  margin-right: 30px;
 }
 
 .fotoUsuario {
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .seta {
@@ -894,21 +897,25 @@ h2 {
 
 nav {
   position: absolute;
-  height: 100%;
-  width: 351px;
+  height: 481px;
+  width: 280px;
   left: 0%;
   right: 75.62%;
-  top: 8.75%;
+  top: 9%;
   bottom: -0.1%;
+  box-sizing: content-box;
   background: #ffffff;
   box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.25);
-  
+  padding-top: 1%; 
+  padding-bottom: 3%;
+ 
 }
 
 li {
   display: block;
-  padding: 15px 5px;
+  padding: 12px 5px;
   border: solid 1px #F2F2F2; 
+  font-size: 17px;
 }
 
 li:hover {
@@ -919,10 +926,10 @@ li:hover {
 }
 
 li img {
-  width: 25px;
-  height: 25px;
-  margin-left: 15px;
-  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+  margin-left: 2.7em;
+  margin-right: 20px;
   color: #001470;
 }
 
