@@ -55,7 +55,6 @@
     margin-top: -35px !important;
   }
   
-  
   .usuario {
     display: none;
   }
@@ -92,9 +91,8 @@
     color: #ffffff;
     background-color: #001470;
     cursor: pointer;
-   
   }
-  
+
   li img {
     width: 25px;
     height: 25px;
@@ -410,17 +408,27 @@
   .btn-action {
     display: block;
   }
-  
+
   .pesquisaFornecedor {
     position: absolute;
-    width: 920px;
-    height: 149px;
-    left: 383px;
-    top: 90px;
+    width: 24em;
+    height: 9em;
+    margin: auto;
+    left: 8%;
+    right: 8%;
+    top: 5.625em;
     background: #ffffff;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
     padding-left: 20px;
-    
+    box-sizing: content-box;
+  }
+  
+  .textPesquisa {
+    width: 93%;
+    height: 20px;
+    margin: 10px 10px 10px;
+    outline: none;
+    border: 1px solid #F2F2F2;
   }
   
   
@@ -431,20 +439,13 @@
     padding-left: 16px;
   }
   
-  .textPesquisa {
-    width: 69%;
-    height: 20px;
-    margin: 30px -70px 0px 17px;
-    outline: none;
-    border: 1px solid #F2F2F2;
-  }
-  
   .cadastroFornecedor {
     position: absolute;
-    width: 920px;
-    height: 100%;
-    left: 383px;
-    top: 280px;
+    width: 24em;
+    height: 215%;
+    margin: 17em auto;
+    left: 8%;
+    right: 8%;
     background: #ffffff;
     font-size: 16px;
     line-height: 18.75px;
@@ -478,7 +479,7 @@
     width: 146px;
     height: 28px;
     float: right;
-    margin-right: 36px;
+    margin-right: 3em;
     margin-bottom: 15px;
     justify-items: right;
     text-transform: uppercase;
@@ -493,11 +494,18 @@
     background: #001470;
     color: #fff;
     border: none;
-    margin-right: 15px;
-    padding-left: 30px;
+    padding-left: 2em;
+    margin-right: 1em;
+    margin-left: 0em;
     text-transform: uppercase;
     box-sizing: content-box;
     cursor: pointer;
+  }
+
+  #lupa{
+    padding-left: 1em;
+    margin-left: 2em;
+    display: inline-flex;
   }
   
   .botaoNovo {
@@ -517,29 +525,29 @@
   }
   
   .inputMaior {
-    width: 850px;
+    width: 25em;
     left: 400px;
     padding-left: 30px;
     border: 1px solid #F2F2F2;
   }
   
   .inputMenor {
-    width: 175px;
+    width: 26em;
     left: 100px;
     padding-left: 16px;
     border: 1px solid #F2F2F2;
-    
+    margin-bottom: 1em;
   }
   
   .inputTel {
-    padding:2px 7px;
+    padding:2px 7em;
     margin-right: 32px;
     border: 1px solid #F2F2F2;
   }
   
   .inputTel2 {
-    padding:2px 4px;
-    margin-right: 25px;
+    padding:2px 7em;
+    margin: 10px 25px 10px 0px;
     border: 1px solid #F2F2F2;
   }
   
@@ -549,14 +557,10 @@
     border: 1px solid #F2F2F2;
   }
   
-  .mail{
-    margin-left: -20px;
-  }
-  
   #email{
     border: 1px solid #F2F2F2;
-    padding: 2px 240px 2px 5px;
-    margin-left: -20px;
+    padding: 2px 13.5em 2px 5px;
+    
   }
 }
 
@@ -688,8 +692,7 @@
     top: 90px;
     background: #ffffff;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
-    padding-left: 20px;
-    
+    padding-left: 20px;  
   }
   
   
@@ -961,7 +964,7 @@ li img:hover {
   position: absolute;
   width: 1017px;
   height: 149px;
-  left: 383px;
+  left: 363px;
   top: 90px;
   background: #ffffff;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
@@ -990,7 +993,7 @@ li img:hover {
   position: absolute;
   width: 1017px;
   height: 633px;
-  left: 383px;
+  left: 363px;
   top: 280px;
   background: #ffffff;
   font-size: 16px;
