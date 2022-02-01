@@ -922,7 +922,6 @@ li:hover {
   color: #ffffff;
   background-color: #001470;
   cursor: pointer;
- 
 }
 
 li img {
@@ -931,7 +930,13 @@ li img {
   margin-left: 2.7em;
   margin-right: 20px;
   color: #001470;
+  
 }
+
+li img:hover {
+  filter: invert(100%);
+}
+
 
 .logotipo {
   position: absolute;
@@ -954,13 +959,14 @@ li img {
 
 .pesquisaFornecedor {
   position: absolute;
-  width: 920px;
+  width: 1017px;
   height: 149px;
   left: 383px;
   top: 90px;
   background: #ffffff;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
   padding-left: 20px;
+  padding-top: 15px;
   
 }
 
@@ -974,15 +980,15 @@ li img {
 
 .textPesquisa {
   width: 69%;
-  height: 20px;
-  margin: 30px -70px 0px 17px;
+  height: 28px;
+  margin: 35px -70px 0px 5px;
   outline: none;
   border: 1px solid #F2F2F2;
 }
 
 .cadastroFornecedor {
   position: absolute;
-  width: 920px;
+  width: 1017px;
   height: 633px;
   left: 383px;
   top: 280px;
@@ -990,11 +996,12 @@ li img {
   font-size: 16px;
   line-height: 18.75px;
   padding-left: 20px;
+  padding-top: 16px;
   display: none;
 }
 
 .cadFornecedor {
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   padding-top: 10px;
   border-bottom: 1px solid #F2F2F2;
 }
@@ -1029,7 +1036,7 @@ li img {
 }
 
 .botaoPesquisar {
-  height: 24px;
+  height: 28px;
   width: 90px;
   background: #001470;
   color: #fff;
@@ -1044,12 +1051,13 @@ li img {
 .botaoNovo {
   background: #ffbe00;
   border: none;
-  height: 24px;
+  height: 28px;
   width: 150px;
   padding-left: 30px;
   text-transform: uppercase;
   box-sizing: content-box;
   cursor: pointer;
+  margin-right: 26px;
 }
 
 .cadastroFornecedor div {
@@ -1058,45 +1066,48 @@ li img {
 }
 
 .inputMaior {
-  width: 850px;
+  width: 950px;
   left: 400px;
+  height: 28px;
   padding-left: 30px;
   border: 1px solid #F2F2F2;
 }
 
 .inputMenor {
-  width: 175px;
+  width: 200px;
   left: 100px;
+  height: 28px;
   padding-left: 16px;
   border: 1px solid #F2F2F2;
   
 }
 
 .inputTel {
+  width: 200px;
   padding:2px 7px;
   margin-right: 32px;
   border: 1px solid #F2F2F2;
+  height: 28px;
 }
 
 .inputTel2 {
+  width: 210px;
   padding:2px 4px;
   margin-right: 25px;
   border: 1px solid #F2F2F2;
-}
-
-.telefone input{
-  padding:2px 4px;
-  margin-right: 31px;
-  border: 1px solid #F2F2F2;
+  height: 28px;
 }
 
 .mail{
   margin-left: -20px;
+  
 }
 
 #email{
   border: 1px solid #F2F2F2;
   padding: 2px 240px 2px 5px;
   margin-left: -20px;
+  height: 28px;
+  width: 220px;
 }
 }
