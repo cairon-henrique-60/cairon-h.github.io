@@ -70,8 +70,8 @@
     position: absolute;
     height: 424px;
     width: 220px;
-    right: -0.5em;
-    top: 14%;
+    right: 0em;
+    top: 4.2em;
     bottom: -0.5%;
     background: #ffffff;
     box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.25);
@@ -145,7 +145,7 @@
 
   .textPesquisa {
     width: 87%;
-    height: 20px;
+    height: 17px;
     margin: 0px;
     outline: none;
     border: 1px solid #f2f2f2;
@@ -154,7 +154,7 @@
   .cadastroFornecedor {
     position: absolute;
     width: 19em;
-    height: 210%;
+    height: 63em;
     left: 9%;
     top: 320px;
     background: #ffffff;
