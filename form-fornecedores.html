@@ -137,13 +137,50 @@
       <div  class="pesquisa">
           <form  class="container-pesquisa">
               <h2>Produtos</h2><hr>
+
+              <label class="grupo1">
+                <span>Grupo</span>
+                <select id="grupo" required>
+                    <option value="0">Selecione</option>
+                    <option value="">Hidraulica</option>
+                    <option value="">Eletrica</option>
+                    <option value="">Ferramentas</option>
+                    <option value="">Acabamentos</option>
+                </select>
+              </label>
+              
               <label>
                   <input class="pesq-produtos" type="text" placeholder="Pesquisar por" autofocus required>
               </label>
+
               <i id="lupa" class="fas fa-search"></i>
               <input  class="btn-pesquisar"  type="submit"value="pesquisar">  
               <i  id="search" class="fas fa-plus-circle"></i>        
               <input id="btn-NovoProd" onclick="mostrar('container-cadastro')" class="novo-fonr" type="button" value="novo produto" >
+
+              <div class="custeio1">
+                <form class="formcusto1">
+                    <fieldset>       
+                      <label class="compra-custo">
+                        <span>Preço de Compra</span>
+                        <input type="number" >
+                      </label>                    
+                      <label class="porcentagem-custo" unit="%">
+                        <span>Porcentagem Custo</span>
+                        <input type="number" min="0.00" max="120.00">
+                      </label>                    
+                      <label class="preco-lucro"unit="%">     
+                        <span>Porcentagem Lucro</span>
+                        <input type="number">
+                      </label>                    
+                      <label class="preco-venda" unit="%">
+                        <span>Preço Sugerido</span>
+                        <input type="number">
+                      </label>
+                    </fieldset>
+                </form>
+              </div>
+
           </form>
       </div>
        </section>
@@ -239,9 +276,7 @@
                   </label><br><br><br>
                   <div class="saida">
                       <input class="salvar" type="submit" value="Salvar">
-                      <input class="cancelar" type="button" id="btn-Cancelar" onclick="fechar('container-cadastro')" value="Cancelar">
-
-                      
+                      <input class="cancelar" type="button" id="btn-Cancelar" onclick="fechar('container-cadastro')" value="Cancelar">    
                   </div>
               </fieldset>
           </form>
