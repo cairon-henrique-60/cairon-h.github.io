@@ -506,7 +506,6 @@
   margin-left: 17px;
 }
 
-
 .btn-pesquisar {
   height: 24px;
   width: 90px;
@@ -583,10 +582,10 @@
 
 .cadastroProdutos {
   position: absolute;
-  width: 920px;
-  height: 450px;
-  left: 363px;
-  top: 280px;
+  width: 71%;
+  height: 557px;
+  left: 324px;
+  top: 80px;
   background: #ffffff;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
   font-size: 16px;
@@ -598,25 +597,25 @@
 
 .form-cadastro h2 {
     color: #001470;
-    margin-left: 17px;
+    margin-left: 11px;
     padding-bottom: 5px;
     text-transform: uppercase;
 }
 
 .form-cadastro span {
   display: block;
-  margin: 20px 17px 9px;
+  margin: 23px 11px 7px;
   color: #4c4646;
 }
 
 .form-cadastro input {
-  margin-left: 17px;
-  width: 94%;
+  margin-left: 11px;
+  width: 95%;
   height: 20px;
   border: 1px solid #272525;
   outline: none;
   border: 1px solid #F2F2F2;
-  color: #4c4646;
+  color: #C4C4C4;
 }
 
 .pesqui {
@@ -634,26 +633,28 @@
 }
 
 .form-pesquisa select {
-  margin-left: 17px;
+  margin-left: 12px;
   height: 25px;
-  width:200px;
+  width: 217px;
   border: 1px solid #272525;
   background: #fff;
+  color: #C4C4C4;
   border: 1px solid #F2F2F2;
   outline: none;
 }
 
 .form-pesquisa span {
   display: block;
-  margin-left: 17px;
+  margin-left: 12px;
   color: #4c4646;
   font-size: 16px;
 }
 
 .form-pesquisa input {
-  margin-left: 17px;
+  margin-left: 12px;
   height: 20px;
-  width:200px;
+  width:218px;
+  outline: none;
   border: 1px solid #F2F2F2;
 }
 
@@ -668,8 +669,7 @@
 .form-custo span {
   display: block;
   color: #4c4646;
-  margin-top: 28px;
-  margin-left: 17px;
+  margin: 28px 11px 0px;
 }
 
 .form-custo label {
@@ -677,16 +677,26 @@
 }
 
 .form-custo input {
-  width: 200px;
+  width: 217px;
   height: 22px;
-  margin-left: 16px;
+  margin-left: 11px;
   border: 1px solid #F2F2F2;
   outline: none;
+  color: #C4C4C4
 }
+
+.status {
+  margin-top: -32px;
+}
+
+.status input{
+  color: #C4C4C4;
+}
+
 
 .saida {
   float: right;
-  margin: 0px 17px;
+  margin: 45px 17px;
 }
 
 .saida input {
