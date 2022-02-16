@@ -595,6 +595,7 @@
   color: #4c4646;
   padding-left: 20px;
   display: none;
+  
 }
 
 .form-cadastro h2 {
@@ -617,7 +618,7 @@
   border: 1px solid #272525;
   outline: none;
   border: 1px solid #F2F2F2;
-  color: #C4C4C4;
+  color: #272525;
 }
 
 .pesqui {
@@ -640,7 +641,7 @@
   width: 217px;
   border: 1px solid #272525;
   background: #fff;
-  color: #C4C4C4;
+  color: #272525;
   border: 1px solid #F2F2F2;
   outline: none;
 }
@@ -658,6 +659,10 @@
   width:218px;
   outline: none;
   border: 1px solid #F2F2F2;
+}
+
+input::placeholder {
+  color: #C4C4C4;
 }
 
 .custeio {
@@ -684,7 +689,7 @@
   margin-left: 11px;
   border: 1px solid #F2F2F2;
   outline: none;
-  color: #C4C4C4
+  color: #272525;
 }
 
 .status {
@@ -692,7 +697,7 @@
 }
 
 .status input{
-  color: #C4C4C4;
+  color: #272525
 }
 
 
@@ -735,4 +740,30 @@
   border: none;
   text-transform: uppercase;
   display: block;
+}
+
+.custeio1 label {
+  display: inline-block;
+}
+
+.miniLogoTipo {
+  position: absolute;
+  opacity: 50%;
+  top: 94%;
+  left: 92%;
+  transform: translate(-50%,-50%);
+}
+
+.miniLogoTipo img {
+  width: 80px;
+  height: 78.09px;
+}
+
+.custeio1 input {
+  width: 16.48em;
+  height: 22px;
+  margin-top: 7px;
+  margin-left: 17px;
+  border: 1px solid #F2F2F2;
+  outline: none;
 }
