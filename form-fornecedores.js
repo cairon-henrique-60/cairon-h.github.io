@@ -81,17 +81,21 @@ window.onload = function () {
   
 };
 
-function mostrar(id) {
-
-  document.getElementById(id).style.display = "block";
+function sumir(logotipo) {
+  document.getElementById(logotipo).style.display = "none";
 }
-function fechar(id) {
-  if (document.getElementById(id).style.display == "block") {
-    document.getElementById(id).style.display = "none";
+function mostrar(miniLogoTipo) {
+  document.getElementById(miniLogoTipo).style.display = "block";
+}
+function fechar(container) {
+  if (document.getElementById(container).style.display == "block") {
+    document.getElementById(container).style.display = "none";
   } else {
-    document.getElementById(id).style.display = "block";
+    document.getElementById(container).style.display = "block";
   }
 }
+
+
 
 function formatar(mascara, documento){
   var i = documento.value.length;
@@ -164,10 +168,6 @@ $('.consultas').click(function(){
   $('nav div .seta3').toggleClass('mostra');
 });
 
-$('.itensCad').click(function(){
-  $('div .logotipo').toggleClass('some');
-});
-
 let i = 0;
 let placeholder = "";
 const txt = "Pesquisar por...";
@@ -229,6 +229,8 @@ function type4() {
   document.getElementById("precoSugerido").setAttribute("placeholder",placeholder4);
   document.getElementById("status").setAttribute("placeholder",placeholder4);
   document.getElementById("entradaProduto").setAttribute("placeholder",placeholder4);
+  document.getElementById("local-loja").setAttribute("placeholder",placeholder4);
+  document.getElementById("local").setAttribute("placeholder",placeholder4);
   i4++;
   setTimeout(type4);
 }

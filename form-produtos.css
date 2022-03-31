@@ -11,9 +11,10 @@
 
 .pesquisa {
   position: absolute;
-  width: 72.2%;
+  max-width: 1520px;
+  width: 75.2%;
   height: 305px;
-  left: 24%;
+  left: 324px;
   top: 90px;
   color: #C4C4C4;
   background: #ffffff;
@@ -133,7 +134,8 @@
 
 .cadastroProdutos {
   position: absolute;
-  width: 71%;
+  max-width: 1500px;
+  width: 74%;
   height: 557px;
   left: 324px;
   top: 90px;
