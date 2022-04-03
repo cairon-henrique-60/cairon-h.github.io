@@ -329,11 +329,71 @@ function type4() {
   document.getElementById("entradaProduto").setAttribute("placeholder",placeholder4);
   document.getElementById("local-loja").setAttribute("placeholder",placeholder4);
   document.getElementById("local").setAttribute("placeholder",placeholder4);
+  document.getElementById("local-loja").setAttribute("placeholder",placeholder4);
+  document.getElementById("razaoSocial").setAttribute("placeholder",placeholder4);
+  document.getElementById("nomeFantasia").setAttribute("placeholder",placeholder4);
+  document.getElementById("endereco").setAttribute("placeholder",placeholder4);
+  document.getElementById("endereco2").setAttribute("placeholder",placeholder4);
+  document.getElementById("numero").setAttribute("placeholder",placeholder4);
+  document.getElementById("numero2").setAttribute("placeholder",placeholder4);
+  document.getElementById("complemento").setAttribute("placeholder",placeholder4);
+  document.getElementById("complemento2").setAttribute("placeholder",placeholder4);
+  document.getElementById("bairro").setAttribute("placeholder",placeholder4);
+  document.getElementById("bairro2").setAttribute("placeholder",placeholder4);
+  document.getElementById("cidade").setAttribute("placeholder",placeholder4);
+  document.getElementById("cidade2").setAttribute("placeholder",placeholder4);
+  document.getElementById("estado").setAttribute("placeholder",placeholder4);
+  document.getElementById("estado2").setAttribute("placeholder",placeholder4);
+  document.getElementById("pais").setAttribute("placeholder",placeholder4);
+  document.getElementById("pais2").setAttribute("placeholder",placeholder4);
+  document.getElementById("nome1").setAttribute("placeholder",placeholder4);
+  document.getElementById("nome2").setAttribute("placeholder",placeholder4);
+  document.getElementById("telefone1").setAttribute("placeholder",placeholder4);
+  document.getElementById("telefone2").setAttribute("placeholder",placeholder4);
+  document.getElementById("telefone3").setAttribute("placeholder",placeholder4);
+  document.getElementById("telefone4").setAttribute("placeholder",placeholder4);
+  document.getElementById("email1").setAttribute("placeholder",placeholder4);
+  document.getElementById("email2").setAttribute("placeholder",placeholder4);
+  document.getElementById("nomeCompleto").setAttribute("placeholder",placeholder4);
   i4++;
   setTimeout(type4);
 }
 
 type4();
+
+// document.getElementsByName('telefone')[0].placeholder='digite..';
+
+let i5 = 0;
+placeholder5 = "";
+const txt5 = "00000-000";
+
+function type5() {
+  placeholder5 += txt5.charAt(i5);
+  
+  document.getElementById("cep").setAttribute("placeholder",placeholder5);
+  document.getElementById("cep2").setAttribute("placeholder",placeholder5);
+  i5++;
+  setTimeout(type5);
+}
+
+type5();
+
+let i6 = 0;
+placeholder6 = "";
+const txt6 = "000.000.000-00";
+
+function type6() {
+  placeholder6 += txt6.charAt(i6);
+  
+  document.getElementById("cnpj").setAttribute("placeholder",placeholder6);
+  document.getElementById("inMunicipal").setAttribute("placeholder",placeholder6);
+  document.getElementById("inEstadual").setAttribute("placeholder",placeholder6);
+  document.getElementById("cpf").setAttribute("placeholder",placeholder4);
+  i6++;
+  setTimeout(type6);
+}
+
+type6();
 
 
 function validarProdutos() {
