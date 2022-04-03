@@ -3,6 +3,96 @@ window.onload = function () {
   var btn2 = document.getElementById("product-action2");
   var btn3 = document.getElementById("btn-action");
   var btn4 = document.getElementById("product-action");
+  var btn5 = document.getElementById("botaoPessoaJ");
+  var btn6 = document.getElementById("botaoPessoaF");
+  var btn7 = document.getElementById("botaoClientePJ");
+  var btn8 = document.getElementById("botaoClientePF");
+  var btn9 = document.getElementById("btn-clientes");
+  var btn10 = document.getElementById("btn-transportadoras");
+  var btn11 = document.getElementById("botaoTransportadorasPJ");
+  var btn12 = document.getElementById("botaoTransportadorasPF");
+
+  var container3 = document.querySelector(".cadastroFornecedorPF");
+  var container5 = document.querySelector(".cadastroFornecedorPJ");
+  var containerClientesPF = document.querySelector(".cadastroClientesPF");
+  var containerClientesPJ = document.querySelector(".cadastroClientesPJ");
+  var containerTransportadorasPF = document.querySelector(".cadastroTransportadorasPF");
+  var containerTransportadorasPJ = document.querySelector(".cadastroTransportadorasPJ");
+
+  btn10.addEventListener("click", function () {
+    if (containerTransportadorasPF.style.display === "block") {
+      containerTransportadorasPF.style.display = "none";
+    } else {
+      containerTransportadorasPF.style.display = "block";
+      
+    }
+  });
+
+  btn11.addEventListener("click", function () {
+    if (containerTransportadorasPJ.style.display === "none") {
+      containerTransportadorasPJ.style.display = "block";
+      containerTransportadorasPF.style.display = 'none';
+    }else {
+      containerTransportadorasPJ.style.display = "none";
+    }
+  });
+
+  btn12.addEventListener("click", function () {
+    if (containerTransportadorasPF.style.display === "none") {
+      containerTransportadorasPF.style.display = "block";
+      containerTransportadorasPJ.style.display = 'none';
+    }
+  });
+  btn9.addEventListener("click", function () {
+    if (containerClientesPF.style.display === "block") {
+      containerClientesPF.style.display = "none";
+    } else {
+      containerClientesPF.style.display = "block";
+      
+    }
+  });
+
+  btn7.addEventListener("click", function () {
+    if (containerClientesPJ.style.display === "none") {
+      containerClientesPJ.style.display = "block";
+      containerClientesPF.style.display = 'none';
+    }else {
+      containerClientesPJ.style.display = "none";
+    }
+  });
+
+  btn8.addEventListener("click", function () {
+    if (containerClientesPF.style.display === "none") {
+      containerClientesPF.style.display = "block";
+      containerClientesPJ.style.display = 'none';
+    }
+  });
+
+  btn3.addEventListener("click", function () {
+    if (container3.style.display === "block") {
+      container3.style.display = "none";
+    } else {
+      container3.style.display = "block";
+      
+    }
+  });
+
+  btn5.addEventListener("click", function () {
+    if (container5.style.display === "none") {
+      container5.style.display = "block";
+      container3.style.display = 'none';
+    }else {
+      container5.style.display = "none";
+    }
+  });
+
+  var container6 = document.querySelector(".cadastroFornecedorPF");
+  btn6.addEventListener("click", function () {
+    if (container6.style.display === "none") {
+      container6.style.display = "block";
+      container5.style.display = 'none';
+    }
+  });
 
   var container = document.querySelector(".container");
   btn.addEventListener("click", function () {
@@ -41,14 +131,7 @@ window.onload = function () {
       container2.style.display === "block";
     }
   });
-  var container3 = document.querySelector(".cadastroFornecedor");
-  btn3.addEventListener("click", function () {
-    if (container3.style.display === "block") {
-      container3.style.display = "none";
-    } else {
-      container3.style.display = "block";
-    }
-  });
+
 
   var container4 = document.querySelector(".cadastroProdutos");
   btn4.addEventListener("click", function () {
@@ -56,16 +139,6 @@ window.onload = function () {
       container4.style.display = "none";
     } else {
       container4.style.display = "block";
-    }
-  });
-
-  var container3 = document.querySelector(".cadastroFornecedor");
-  btn3.addEventListener("click", function () {
-    if (container3.style.display === "block") {
-      container4.style.display = "none";
-    } 
-    else {
-      container3.style.display == "block";
     }
   });
 
@@ -81,11 +154,34 @@ window.onload = function () {
   
 };
 
+// function sumir(pesquisaFornecedor) {
+//   document.getElementById(pesquisaFornecedor).style.display = "none";
+// }
+
+function mostrar(paginaTransportadoras) {
+  document.getElementById(paginaTransportadoras).style.display = "block";
+}
+function sumir(paginaTransportadoras) {
+  document.getElementById(paginaTransportadoras).style.display = "none";
+}
+function mostrar(paginaClientes) {
+  document.getElementById(paginaClientes).style.display = "block";
+}
+function sumir(paginaClientes) {
+  document.getElementById(paginaClientes).style.display = "none";
+}
+function sumir(paginaProdutos) {
+  document.getElementById(paginaProdutos).style.display = "none";
+}
+function sumir(paginaFornecedores) {
+  document.getElementById(paginaFornecedores).style.display = "none";
+}
+function mostrar(paginaFornecedores) {
+  document.getElementById(paginaFornecedores).style.display = "block";
+}
+
 function sumir(logotipo) {
   document.getElementById(logotipo).style.display = "none";
-}
-function mostrar(miniLogoTipo) {
-  document.getElementById(miniLogoTipo).style.display = "block";
 }
 function fechar(container) {
   if (document.getElementById(container).style.display == "block") {
@@ -94,6 +190,8 @@ function fechar(container) {
     document.getElementById(container).style.display = "block";
   }
 }
+
+
 
 
 

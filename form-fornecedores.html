@@ -28,21 +28,30 @@
         <ul class="itensMenu">
           <li class="cad"><img src="imagens/Icone_Cadastros.svg"><a>Cadastros</a><i class="fas fa-chevron-right seta2"></i>
             <ul class="itensCad" onclick="sumir('logotipo')">
-              <li>
-                <div id="product-action" type="button"  class="product-action">
+              <li onclick="sumir('paginaClientes')">
+                <div id="product-action" type="button"  class="product-action" onclick="sumir('paginaTransportadoras')">
                    <img src="imagens/Icone_Produtos.svg"><a>Produtos</a>
                 </div>
                 </li>
-                <li>
-                  <div id="btn-action" type="button"  class="btn-action" >
-                    <img src="imagens/Icone_Fornecedores.svg"><a>Fornecedores</a>
+                <li onclick="sumir('paginaProdutos')">
+                  <div id="btn-action" type="button"  class="btn-action" onclick="sumir('paginaClientes')">
+                    <img src="imagens/Icone_Fornecedores.svg"><a onclick="mostrar('paginafornecedores')">Fornecedores</a>
                   </div>
                 </li>
-                <li><img src="imagens/Icone_Clientes.svg"><a>Clientes</a></li>
+                <li id="btn-transportadoras" onclick="sumir('paginaFornecedores')">
+                  <div type="button" onclick="sumir('paginaClientes')">
+                    <img src="imagens/Icone_Fornecedores.svg" onclick="sumir('paginaProdutos')"><a onclick="mostrar('paginaTransportadoras')">Transportadoras</a>
+                  </div>
+                </li>
+                <li id="btn-clientes" onclick="sumir('paginaTransportadoras')">
+                  <div onclick="mostrar('paginaClientes')">
+                    <img src="imagens/Icone_Clientes.svg"><a onclick="sumir('paginaFornecedores')">Clientes</a>
+                  </div>
+                </li>
               </ul>
             </li>
             <li class="consultas"><img src="imagens/Icone_Consultas.svg"><a>Consultas</a><i class="fas fa-chevron-right seta3"></i>
-              <ul class="itensConsultas" onclick="sumir('logotipo')">
+              <ul class="itensConsultas" id="itensConsultas" onclick="sumir('logotipo')">
                 <li>
                   <div id="product-action2" type="button"  class="product-action">
                     <img src="imagens/Icone_Produtos.svg"><a>Produtos</a>
@@ -53,7 +62,7 @@
                     <img src="imagens/Icone_Fornecedores.svg"><a>Fornecedores</a>
                   </div>
                 </li>
-                <li><img src="imagens/Icone_Clientes.svg"><a>Clientes</a></li>
+                <li><img src="imagens/Icone_Clientes.svg"><a >Clientes</a></li>
               </ul>
             </li>
             <li><img src="imagens/Icone_Compras.svg"><a>Compras</a></li>
@@ -66,8 +75,8 @@
     <div class="logotipo" id="logotipo">
       <img  src="imagens/logotipo.svg" alt="">
     </div>
-  </nav>  
-    <section class="consulta-fornecedor" onclick="mostrar('miniLogoTipo')" >
+  </nav> 
+    <section class="consulta-fornecedor" id="pesquisaFornecedor" >
       <div id="container3" class="container">
         <div class="pesquisaFornecedor">
           <div>
@@ -89,51 +98,67 @@
             <i id="lupa" class="fas fa-search"></i>
             <button class="botaoPesquisar" >Pesquisar</button>
             <i  id="search" class="fas fa-plus-circle"></i>     
-            <input type="button" id="botaoNovo" class="botaoNovo" value="Novo Fornecedor"/>
+            <input type="button" id="botaoNovo" class="botaoNovo" onclick="mostrar('paginaFornecedores')" value="Novo Fornecedor"/>
           </form>
         </div>
-        <div class="miniLogoTipo">
+        <div class="miniLogoTipo" id="miniLogoTipo">
           <img  src="imagens/logotipo.svg" alt="">
         </div>
       </section>
-  <section > 
+      <!-- Cadastro Fornecedores Pessoa Jurídica  -->
+  <section id="paginaFornecedores"> 
     <div>
-      <form onsubmit="validarFornecedores()">
-      </div>
-        <div id="cadastroFornecedor" class="cadastroFornecedor">
+      <form method="post" action="" onsubmit="validarFornecedores()">
+        <div id="cadastroFornecedorPJ" class="cadastroFornecedorPJ">
             <h2 class="cadFornecedor">CADASTRO DE FORNECEDORES</h2>
-            
+            <button class="botaoPessoaF" id="botaoPessoaF" type="button">PESSOA FÍSICA</button>
+            <button class="botaoPessoaJ" type="button">PESSOA JURÍDICA</button><br></br>
+          <section class="sectionLinha5">  
             <div>
-              <label>Razão Social*</label><br>
+              <label>Razão Social</label><br>
               <input class="inputMaior" type="text" name="razaoSocial" id="razaoSocial" required>
-            </div><br><br><br>
+            </div>
             <div>
               <label>Nome Fantasia</label><br>
               <input class="inputMaior" type="text" name="nomeFantasia" id="nomeFantasia">
-            </div><br><br><br>
+            </div>
+          </section><br>
+          <section class="sectionLinha5">  
             <div>
               <label >CNPJ</label><br>
-              <input class="inputMenor" type="text" name="cnpj" pattern="\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2}" id="cnpj" maxlength="18" onkeypress="formatar('##.###.###/####-##',this)">
-            </div>
-            <div>
-              <label>CPF</label><br>
-              <input class="inputMenor" type="text" name="cpf" id="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" maxlength="14" onkeypress="formatar('###.###.###-##',this)">
-            </div>
-            <div>
-              <label>Insc. Estadual</label><br>
-              <input class="inputMenor" type="text" name="inEstadual" id="inEstadual" maxlength="15" onkeypress="formatar('###.###.###.###',this)">
+              <input class="input3" type="text" name="cnpj" pattern="\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2}" id="cnpj" maxlength="18" onkeypress="formatar('##.###.###/####-##',this)">
             </div>
             <div>
               <label>Insc. Municipal</label><br>
-              <input class="inputMenor" type="text" name="inMunicipal" id="inMunicipal" maxlength="12" onkeypress="formatar('##########-#',this)">
-            </div><br><br>
+              <input class="input3" type="text" name="inMunicipal" id="inMunicipal" maxlength="12" onkeypress="formatar('##########-#',this)">
+            </div>
             <div>
-              <label>Endereço</label><br>
-              <input class="inputMaior" class="inputMaior" type="text" name="endereco" id="endereco" >
-            </div><br><br><br>
+              <label>Insc. Estadual</label><br>
+              <input class="input3" type="text" name="inEstadual" id="inEstadual" maxlength="15" onkeypress="formatar('###.###.###.###',this)">
+            </div>
+          </section><br>
+            <section class="sectionLinha5">
+              <div>
+                <label>CEP</label><br>
+                <input class="inputMenor" type="text" name="cep" id="cep" maxlength="9" onkeypress="formatar('#####-###',this)">
+              </div>
+              <div>
+                <label>Endereço</label><br>
+                <input class="inputMaior" class="inputMaior" type="text" name="endereco" id="endereco" >
+              </div>
+              <div>
+                <label>Número</label><br>
+                <input class="inputMenor" type="text" name="numero" id="numero">
+              </div>
+            </section><br>
+              <div>
+                <label>Complemento</label><br>
+                <input class="inputComplemento" type="text" name="complemento" id="complemento">
+              </div><br>
+            <section class="sectionLinha5">
             <div>
-              <label>CEP</label><br>
-              <input class="inputMenor" type="text" name="cep" id="cep" maxlength="9" onkeypress="formatar('#####-###',this)">
+              <label>Bairro</label><br>
+              <input class="inputMenor" type="text" name="bairro" id="bairro">
             </div>
             <div>
               <label>Cidade</label><br>
@@ -146,24 +171,169 @@
             <div>
               <label>País</label><br>
               <input class="inputMenor" type="text" name="pais" id="pais">
-            </div><br><br>
-            <div>
-              <label>Telefone*</label><br>
-              <input class="inputTel" type="tel" name="telefone1" id="telefone1" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)" required>
-              <input type="tel" class="inputTel2" name="telefone2" id="telefone2" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)">
             </div>
-            <div>
-              <label class=
-              "mail">E-mail*</label><br>
-              <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
-            </div>
+            </section><br>
+              <h4 class="contato">Contato:</h4><br>
+                    <section class="sectionLinha5">
+                        <div>
+                            <label>Nome</label><br>
+                            <input class="inputMenor" type="text" name="nome" id="nome1" required>
+                        </div>
+                        <div>
+                            <label>Telefone Principal</label><br>
+                            <input class="inputMenor" type="tel" name="telefone" id="telefone1" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)" required>
+                        </div>
+                        <div>
+                            <label>Telefone Secundário</label><br>
+                            <input type="tel" class="inputMenor" name="telefone" id="telefone2" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)">
+                            </div>
+                        <div>
+                            <label class="mail">E-mail</label><br>
+                            <input type="email" name="email" class="inputMenor"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email1" required>
+                        </div>
+                    </section><br>
+                    <section class="sectionLinha5">
+                        <div>
+                            <label>Nome</label><br>
+                            <input class="inputMenor" type="text" name="nome" id="nome2" required>
+                        </div>
+                        <div>
+                            <label>Telefone Principal</label><br>
+                            <input class="inputMenor" type="tel" name="telefone1" id="telefone3" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)" required>
+                        </div>
+                        <div>
+                            <label>Telefone Secundário</label><br>
+                            <input type="tel" class="inputMenor" name="telefone2" id="telefone4" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)">
+                            </div>
+                        <div>
+                            <label class="mail">E-mail</label><br>
+                            <input type="email" name="email" id="email2" class="inputMenor"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                        </div>
+                    </section><br>
             <button class="botaoSalvar" type="submit">Salvar</button>
             <input type="button" onclick="fechar('cadastroFornecedor')" class="botaoCancelar" value="Cancelar">
           </div>
         </div>
       </form>
     </div>
-  </section>       
+  </section>  
+    <!-- Cadastro Fornecedores Pessoa Física -->
+    <section class="paginaFornecedores"> 
+      <div>
+        <form onsubmit="validarFornecedores()">
+          <div id="cadastroFornecedorPF" class="cadastroFornecedorPF">
+              <h2 class="cadFornecedor">CADASTRO DE FORNECEDORES</h2>
+              <button class="botaoPessoaF" type="button">PESSOA FÍSICA</button>
+              <button class="botaoPessoaJ" type="button" id="botaoPessoaJ">PESSOA JURÍDICA</button><br></br>
+            <section class="sectionLinha5">  
+              <div>
+                <label>Nome Completo</label><br>
+                <input class="inputNomeC" type="text" name="nomeCompleto" id="nomeCompleto" required>
+              </div>
+              <div>
+                <label>CPF</label><br>
+                <input class="inputMenor" type="text" name="cpf" id="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" maxlength="14" onkeypress="formatar('###.###.###-##',this)">
+              </div>
+            </section><br>
+              <section class="sectionLinha5">
+                <div>
+                  <label>CEP</label><br>
+                  <input class="inputMenor" type="text" name="cep" id="cep2" maxlength="9" onkeypress="formatar('#####-###',this)">
+                </div>
+                <div>
+                  <label>Endereço</label><br>
+                  <input class="inputMaior" class="inputMaior" type="text" name="endereco" id="endereco2" >
+                </div>
+                <div>
+                  <label>Número</label><br>
+                  <input class="inputMenor" type="text" name="numero" id="numero2">
+                </div>
+              </section><br>
+              <div>
+                <label>Complemento</label><br>
+                <input class="inputComplemento2" type="text" name="complemento" id="complemento2">
+              </div><br>
+              <section class="sectionLinha5">
+              <div>
+                <label>Bairro</label><br>
+                <input class="inputMenor" type="text" name="bairro" id="bairro2">
+              </div>
+              <div>
+                <label>Cidade</label><br>
+                <input class="inputMenor" type="text" name="cidade" id="cidade2">
+              </div>
+              <div>
+                <label>Estado</label><br>
+                <input class="inputMenor" type="text" name="estado" id="estado2">
+              </div>
+              <div>
+                <label>País</label><br>
+                <input class="inputMenor" type="text" name="pais" id="pais2">
+              </div>
+              </section><br>
+                <legend class="contato">Contato:</legend><br>
+                      <section class="sectionLinha5">
+                          <div>
+                              <label>Nome</label><br>
+                              <input class="inputMenor" type="text" name="nome4" id="nome" required>
+                          </div>
+                          <div>
+                              <label>Telefone Principal</label><br>
+                              <input class="inputMenor" type="tel" name="telefone1" id="telefone7" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)" required>
+                          </div>
+                          <div>
+                              <label>Telefone Secundário</label><br>
+                              <input type="tel" class="inputMenor" name="telefone2" id="telefone8" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)">
+                              </div>
+                          <div>
+                              <label class="mail">E-mail</label><br>
+                              <input type="email" name="email" id="email4" class="inputMenor"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                          </div>
+                      </section><br>
+                      <section class="sectionLinha5">
+                          <div>
+                              <label>Nome</label><br>
+                              <input class="inputMenor" type="text" name="nome" id="nome5" required>
+                          </div>
+                          <div>
+                              <label>Telefone Principal</label><br>
+                              <input class="inputMenor" type="tel" name="telefone1" id="telefone9" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)" required>
+                          </div>
+                          <div>
+                              <label>Telefone Secundário</label><br>
+                              <input type="tel" class="inputMenor" name="telefone2" id="telefone10" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)">
+                              </div>
+                          <div>
+                              <label class="mail">E-mail</label><br>
+                              <input type="email"  id="email5" name="email" class="inputMenor"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                          </div>
+                      </section><br>
+                      <section class="sectionLinha5">
+                          <div>
+                              <label>Nome</label><br>
+                              <input class="inputMenor" type="text" name="nome" id="nome6" required>
+                          </div>
+                          <div>
+                              <label>Telefone Principal</label><br>
+                              <input class="inputMenor" type="tel" name="telefone1" id="telefone11" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)" required>
+                          </div>
+                          <div>
+                              <label>Telefone Secundário</label><br>
+                              <input type="tel" class="inputMenor" name="telefone2" id="telefone12" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)">
+                              </div>
+                          <div>
+                              <label class="mail">E-mail</label><br>
+                              <input type="email" name="email" id="email6" class="inputMenor"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                          </div>
+                      </section><br>
+              <button class="botaoSalvar" type="submit">Salvar</button>
+              <input type="button" onclick="fechar('cadastroFornecedor')" class="botaoCancelar" value="Cancelar">
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
     <!-- Formulario de produtos -->  
     <section id="cadastro-produtos" class="cadastro-produtos">
       <div  class="pesquisa">
@@ -216,12 +386,11 @@
           </form>
           
       </div>
-      <div class="miniLogoTipo">
+      <div class="miniLogoTipo" id="miniLogoTipo">
         <img  src="imagens/logotipo.svg" alt="">
       </div>
-       </section>
-
-    <section id="container-cadastro"  class="cadastroProdutos" onsubmit="return validarProdutos()">
+    </section>
+    <section id="paginaProdutos"  class="cadastroProdutos" onsubmit="return validarProdutos()">
       
       <div class="container-cadastro">
           <form class="form-cadastro" >
@@ -325,9 +494,478 @@
           </form>
       </div> 
                    
- </section>
-  </div>
-  <script src="form-fornecedores.js"></script>
+    </section>
+
+  <!-- Cadastro de Clientes Pessoa Física -->
+  <section class="paginaClientes" id="paginaClientes"> 
+      <form onsubmit="validarFornecedores()">
+        <div class="cadastroClientesPF" id="cadastroClientesPF">
+              <h2 class="cadastroH2">CADASTRO DE CLIENTES</h2>
+              <button class="botaoClientePF"  type="button">PESSOA FÍSICA</button>
+              <button class="botaoClientePJ" id="botaoClientePJ" type="button" >PESSOA JURÍDICA</button><br></br>
+            <section class="sectionLinha5">  
+              <div>
+                <label>Nome Completo</label><br>
+                <input class="inputNomeC" type="text" name="nomeCompleto" id="nomeCompleto" required>
+              </div>
+              <div>
+                <label>CPF</label><br>
+                <input class="inputMenor" type="text" name="cpf" id="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" maxlength="14" onkeypress="formatar('###.###.###-##',this)">
+              </div>
+            </section><br>
+              <section class="sectionLinha5">
+                <div>
+                  <label>CEP</label><br>
+                  <input class="inputMenor" type="text" name="cep" id="cep" maxlength="9" onkeypress="formatar('#####-###',this)">
+                </div>
+                <div>
+                  <label>Endereço</label><br>
+                  <input class="inputMaior" class="inputMaior" type="text" name="endereco" id="endereco" >
+                </div>
+                <div>
+                  <label>Número</label><br>
+                  <input class="inputMenor" type="text" name="numero" id="numero">
+                </div>
+              </section><br>
+              <div>
+                <label>Complemento</label><br>
+                <input class="inputComplemento2" type="text" name="complemento" id="complemento">
+              </div><br>
+              <section class="sectionLinha5">
+              <div>
+                <label>Bairro</label><br>
+                <input class="inputMenor" type="text" name="bairro" id="bairro">
+              </div>
+              <div>
+                <label>Cidade</label><br>
+                <input class="inputMenor" type="text" name="cidade" id="cidade">
+              </div>
+              <div>
+                <label>Estado</label><br>
+                <input class="inputMenor" type="text" name="estado" id="estado">
+              </div>
+              <div>
+                <label>País</label><br>
+                <input class="inputMenor" type="text" name="pais" id="pais">
+              </div>
+              </section><br><br> 
+                <legend class="contato">Contato:</legend><br>
+                      <section class="sectionLinha5">
+                          <div>
+                              <label>Nome</label><br>
+                              <input class="inputMenor" type="text" name="nome" id="nome" required>
+                          </div>
+                          <div>
+                              <label>Telefone Principal</label><br>
+                              <input class="inputMenor" type="tel" name="telefone1" id="telefone1" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)" required>
+                          </div>
+                          <div>
+                              <label>Telefone Secundário</label><br>
+                              <input type="tel" class="inputMenor" name="telefone2" id="telefone2" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)">
+                              </div>
+                          <div>
+                              <label class="mail">E-mail</label><br>
+                              <input type="email" name="email" class="inputMenor"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                          </div>
+                      </section><br>
+                      <section class="sectionLinha5">
+                          <div>
+                              <label>Nome</label><br>
+                              <input class="inputMenor" type="text" name="nome" id="nome" required>
+                          </div>
+                          <div>
+                              <label>Telefone Principal</label><br>
+                              <input class="inputMenor" type="tel" name="telefone1" id="telefone1" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)" required>
+                          </div>
+                          <div>
+                              <label>Telefone Secundário</label><br>
+                              <input type="tel" class="inputMenor" name="telefone2" id="telefone2" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)">
+                              </div>
+                          <div>
+                              <label class="mail">E-mail</label><br>
+                              <input type="email" name="email" class="inputMenor"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                          </div>
+                      </section><br>
+                      <section class="sectionLinha5">
+                          <div>
+                              <label>Nome</label><br>
+                              <input class="inputMenor" type="text" name="nome" id="nome" required>
+                          </div>
+                          <div>
+                              <label>Telefone Principal</label><br>
+                              <input class="inputMenor" type="tel" name="telefone1" id="telefone1" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)" required>
+                          </div>
+                          <div>
+                              <label>Telefone Secundário</label><br>
+                              <input type="tel" class="inputMenor" name="telefone2" id="telefone2" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)">
+                              </div>
+                          <div>
+                              <label class="mail">E-mail</label><br>
+                              <input type="email" name="email" class="inputMenor"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                          </div>
+                      </section><br>
+          <button class="botaoSalvar" type="submit">Salvar</button>
+              <input type="button" class="botaoCancelar" value="Cancelar">
+        </form>
+      </div>
+    </section>
+  <!-- Cadastro Clientes Pessoa Jurídica -->
+    <section> 
+      <div>
+        <form method="post" action="" onsubmit="validarFornecedores()">
+          <div id="cadastroClientesPJ" class="cadastroClientesPJ">
+              <h2 class="cadastroH2">CADASTRO DE CLIENTES</h2>
+              <button class="botaoClientePF" id="botaoClientePF" type="button">PESSOA FÍSICA</button>
+              <button class="botaoClientePJ"  type="button">PESSOA JURÍDICA</button><br></br>
+            <section class="sectionLinha5">  
+              <div>
+                <label>Razão Social</label><br>
+                <input class="inputMaior" type="text" name="razaoSocial" id="razaoSocial" required>
+              </div>
+              <div>
+                <label>Nome Fantasia</label><br>
+                <input class="inputMaior" type="text" name="nomeFantasia" id="nomeFantasia">
+              </div>
+            </section><br>
+            <section class="sectionLinha5">  
+              <div>
+                <label >CNPJ</label><br>
+                <input class="input3" type="text" name="cnpj" pattern="\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2}" id="cnpj" maxlength="18" onkeypress="formatar('##.###.###/####-##',this)">
+              </div>
+              <div>
+                <label>Insc. Municipal</label><br>
+                <input class="input3" type="text" name="inMunicipal" id="inMunicipal" maxlength="12" onkeypress="formatar('##########-#',this)">
+              </div>
+              <div>
+                <label>Insc. Estadual</label><br>
+                <input class="input3" type="text" name="inEstadual" id="inEstadual" maxlength="15" onkeypress="formatar('###.###.###.###',this)">
+              </div>
+            </section><br>
+              <section class="sectionLinha5">
+                <div>
+                  <label>CEP</label><br>
+                  <input class="inputMenor" type="text" name="cep" id="cep" maxlength="9" onkeypress="formatar('#####-###',this)">
+                </div>
+                <div>
+                  <label>Endereço</label><br>
+                  <input class="inputMaior" class="inputMaior" type="text" name="endereco" id="endereco" >
+                </div>
+                <div>
+                  <label>Número</label><br>
+                  <input class="inputMenor" type="text" name="numero" id="numero">
+                </div>
+              </section><br>
+                <div>
+                  <label>Complemento</label><br>
+                  <input class="inputComplemento" type="text" name="complemento" id="complemento">
+                </div><br>
+              <section class="sectionLinha5">
+              <div>
+                <label>Bairro</label><br>
+                <input class="inputMenor" type="text" name="bairro" id="bairro">
+              </div>
+              <div>
+                <label>Cidade</label><br>
+                <input class="inputMenor" type="text" name="cidade" id="cidade">
+              </div>
+              <div>
+                <label>Estado</label><br>
+                <input class="inputMenor" type="text" name="estado" id="estado">
+              </div>
+              <div>
+                <label>País</label><br>
+                <input class="inputMenor" type="text" name="pais" id="pais">
+              </div>
+              </section><br><br> 
+                <h4 class="contato">Contato:</h4><br>
+                      <section class="sectionLinha5">
+                          <div>
+                              <label>Nome</label><br>
+                              <input class="inputMenor" type="text" name="nome" id="nome1" required>
+                          </div>
+                          <div>
+                              <label>Telefone Principal</label><br>
+                              <input class="inputMenor" type="tel" name="telefone1" id="telefone1" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)" required>
+                          </div>
+                          <div>
+                              <label>Telefone Secundário</label><br>
+                              <input type="tel" class="inputMenor" name="telefone2" id="telefone2" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)">
+                              </div>
+                          <div>
+                              <label class="mail">E-mail</label><br>
+                              <input type="email" name="email" class="inputMenor"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email1" required>
+                          </div>
+                      </section><br>
+                      <section class="sectionLinha5">
+                          <div>
+                              <label>Nome</label><br>
+                              <input class="inputMenor" type="text" name="nome" id="nome2" required>
+                          </div>
+                          <div>
+                              <label>Telefone Principal</label><br>
+                              <input class="inputMenor" type="tel" name="telefone1" id="telefone3" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)" required>
+                          </div>
+                          <div>
+                              <label>Telefone Secundário</label><br>
+                              <input type="tel" class="inputMenor" name="telefone2" id="telefone4" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)">
+                              </div>
+                          <div>
+                              <label class="mail">E-mail</label><br>
+                              <input type="email" name="email" id="email2" class="inputMenor"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                          </div>
+                      </section><br>
+              <button class="botaoSalvar" type="submit">Salvar</button>
+              <input type="button" onclick="fechar('cadastroFornecedor')" class="botaoCancelar" value="Cancelar">
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  <!-- Cadastro de Transportadoras Pessoa Física -->
+  <section class="paginaTransportadoras" id="paginaTransportadoras"> 
+    <div>
+    <form onsubmit="validarTransportadoras()">
+      <div class="cadastroTransportadorasPF" id="cadastroTransportadorasPF">
+            <h2 class="cadastroH2">CADASTRO DE TRANSPORTADORAS</h2>
+            <button class="botaoTransportadorasPF"  type="button">PESSOA FÍSICA</button>
+            <button class="botaoTransportadorasPJ" id="botaoTransportadorasPJ" type="button" >PESSOA JURÍDICA</button><br></br>
+          <section class="sectionLinha5"> 
+            <div>
+              <label>Tipo de Transportadora</label><br>
+              <input class="inputMenor" type="text" name="tipoTransportadora" id="tipoTransportadora" required>
+            </div> 
+            <div>
+              <label>Nome Completo</label><br>
+              <input class="inputMaior" type="text" name="nomeCompleto" id="nomeCompleto" required>
+            </div>
+            <div>
+              <label>CPF</label><br>
+              <input class="inputMenor" type="text" name="cpf" id="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" maxlength="14" onkeypress="formatar('###.###.###-##',this)">
+            </div>
+          </section><br>
+            <section class="sectionLinha5">
+              <div>
+                <label>CEP</label><br>
+                <input class="inputMenor" type="text" name="cep" id="cep" maxlength="9" onkeypress="formatar('#####-###',this)">
+              </div>
+              <div>
+                <label>Endereço</label><br>
+                <input class="inputMaior" class="inputMaior" type="text" name="endereco" id="endereco" >
+              </div>
+              <div>
+                <label>Número</label><br>
+                <input class="inputMenor" type="text" name="numero" id="numero">
+              </div>
+            </section><br>
+            <div>
+              <label>Complemento</label><br>
+              <input class="inputComplemento2" type="text" name="complemento" id="complemento">
+            </div><br>
+            <section class="sectionLinha5">
+            <div>
+              <label>Bairro</label><br>
+              <input class="inputMenor" type="text" name="bairro" id="bairro">
+            </div>
+            <div>
+              <label>Cidade</label><br>
+              <input class="inputMenor" type="text" name="cidade" id="cidade">
+            </div>
+            <div>
+              <label>Estado</label><br>
+              <input class="inputMenor" type="text" name="estado" id="estado">
+            </div>
+            <div>
+              <label>País</label><br>
+              <input class="inputMenor" type="text" name="pais" id="pais">
+            </div>
+            </section><br><br> 
+              <legend class="contato">Contato:</legend><br>
+                    <section class="sectionLinha5">
+                        <div>
+                            <label>Nome</label><br>
+                            <input class="inputMenor" type="text" name="nome" id="nome" required>
+                        </div>
+                        <div>
+                            <label>Telefone Principal</label><br>
+                            <input class="inputMenor" type="tel" name="telefone1" id="telefone1" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)" required>
+                        </div>
+                        <div>
+                            <label>Telefone Secundário</label><br>
+                            <input type="tel" class="inputMenor" name="telefone2" id="telefone2" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)">
+                            </div>
+                        <div>
+                            <label class="mail">E-mail</label><br>
+                            <input type="email" name="email" class="inputMenor"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                        </div>
+                    </section><br>
+                    <section class="sectionLinha5">
+                        <div>
+                            <label>Nome</label><br>
+                            <input class="inputMenor" type="text" name="nome" id="nome" required>
+                        </div>
+                        <div>
+                            <label>Telefone Principal</label><br>
+                            <input class="inputMenor" type="tel" name="telefone1" id="telefone1" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)" required>
+                        </div>
+                        <div>
+                            <label>Telefone Secundário</label><br>
+                            <input type="tel" class="inputMenor" name="telefone2" id="telefone2" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)">
+                            </div>
+                        <div>
+                            <label class="mail">E-mail</label><br>
+                            <input type="email" name="email" class="inputMenor"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                        </div>
+                    </section><br>
+                    <section class="sectionLinha5">
+                        <div>
+                            <label>Nome</label><br>
+                            <input class="inputMenor" type="text" name="nome" id="nome" required>
+                        </div>
+                        <div>
+                            <label>Telefone Principal</label><br>
+                            <input class="inputMenor" type="tel" name="telefone1" id="telefone1" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)" required>
+                        </div>
+                        <div>
+                            <label>Telefone Secundário</label><br>
+                            <input type="tel" class="inputMenor" name="telefone2" id="telefone2" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)">
+                            </div>
+                        <div>
+                            <label class="mail">E-mail</label><br>
+                            <input type="email" name="email" class="inputMenor"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                        </div>
+                    </section><br>
+        <button class="botaoSalvar" type="submit">Salvar</button>
+            <input type="button" class="botaoCancelar" value="Cancelar">
+      </form>
+    </div>
+    </div>
+  </section>
+  <!-- Cadastro de Transportadoras Pessoa Jurídica -->
+  <section> 
+    <div>
+      <form method="post" action="" onsubmit="validarTransportadoras()">
+        <div id="cadastroTransportadorasPJ" class="cadastroTransportadorasPJ">
+            <h2 class="cadastroH2">CADASTRO DE TRANSPORTADORAS</h2>
+            <button class="botaoTransportadorasPF" id="botaoTransportadorasPF" type="button">PESSOA FÍSICA</button>
+            <button class="botaoTransportadorasPJ"  type="button">PESSOA JURÍDICA</button><br></br>
+          <section class="sectionLinha5">  
+            <div>
+              <label>Tipo de Transportadora</label><br>
+              <input class="inputMenor" type="text" name="tipoTransportadora" id="tipoTransportadora" required>
+            </div>
+            <div>
+              <label>Razão Social</label><br>
+              <input class="inputMaior" type="text" name="razaoSocial" id="razaoSocial" required>
+            </div>
+            <div>
+              <label>Nome Fantasia</label><br>
+              <input class="inputMenor" type="text" name="nomeFantasia" id="nomeFantasia">
+            </div>
+          </section><br>
+          <section class="sectionLinha5">  
+            <div>
+              <label >CNPJ</label><br>
+              <input class="input3" type="text" name="cnpj" pattern="\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2}" id="cnpj" maxlength="18" onkeypress="formatar('##.###.###/####-##',this)">
+            </div>
+            <div>
+              <label>Insc. Municipal</label><br>
+              <input class="inputMaior" type="text" name="inMunicipal" id="inMunicipal" maxlength="12" onkeypress="formatar('##########-#',this)">
+            </div>
+            <div>
+              <label>Insc. Estadual</label><br>
+              <input class="input3" type="text" name="inEstadual" id="inEstadual" maxlength="15" onkeypress="formatar('###.###.###.###',this)">
+            </div>
+          </section><br>
+            <section class="sectionLinha5">
+              <div>
+                <label>CEP</label><br>
+                <input class="inputMenor" type="text" name="cep" id="cep" maxlength="9" onkeypress="formatar('#####-###',this)">
+              </div>
+              <div>
+                <label>Endereço</label><br>
+                <input class="inputMaior" class="inputMaior" type="text" name="endereco" id="endereco" >
+              </div>
+              <div>
+                <label>Número</label><br>
+                <input class="inputMenor" type="text" name="numero" id="numero">
+              </div>
+            </section><br>
+            <section class="sectionLinha5">
+            <div>
+              <label>Complemento</label><br>
+              <input class="inputMaior" type="text" name="complemento" id="complemento">
+            </div>
+            <div>
+              <label>Bairro</label><br>
+              <input class="inputMenor" type="text" name="bairro" id="bairro">
+            </div>
+            <div>
+              <label>Cidade</label><br>
+              <input class="inputMenor" type="text" name="cidade" id="cidade">
+            </div>
+            </section><br>
+            <section class="sectionLinha5">
+            <div>
+              <label>Estado</label><br>
+              <input class="inputMenor" type="text" name="estado" id="estado">
+            </div>
+            <div>
+              <label>País</label><br>
+              <input class="inputMenor" type="text" name="pais" id="pais">
+            </div>
+            <div>
+              <label>Região de Abrangência</label><br>
+              <input class="inputMaior" type="text" name="pais" id="pais">
+            </div>
+            </section><br><br> 
+              <h4 class="contato">Contato:</h4><br>
+                    <section class="sectionLinha5">
+                        <div>
+                            <label>Nome</label><br>
+                            <input class="inputMenor" type="text" name="nome" id="nome1" required>
+                        </div>
+                        <div>
+                            <label>Telefone Principal</label><br>
+                            <input class="inputMenor" type="tel" name="telefone1" id="telefone1" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)" required>
+                        </div>
+                        <div>
+                            <label>Telefone Secundário</label><br>
+                            <input type="tel" class="inputMenor" name="telefone2" id="telefone2" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)">
+                            </div>
+                        <div>
+                            <label class="mail">E-mail</label><br>
+                            <input type="email" name="email" class="inputMenor"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="email1" required>
+                        </div>
+                    </section><br>
+                    <section class="sectionLinha5">
+                        <div>
+                            <label>Nome</label><br>
+                            <input class="inputMenor" type="text" name="nome" id="nome2" required>
+                        </div>
+                        <div>
+                            <label>Telefone Principal</label><br>
+                            <input class="inputMenor" type="tel" name="telefone1" id="telefone3" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)" required>
+                        </div>
+                        <div>
+                            <label>Telefone Secundário</label><br>
+                            <input type="tel" class="inputMenor" name="telefone2" id="telefone4" maxlength="13" pattern="[0-9]{2}-[0-9]{4,6}-[0-9]{3,4}$" onkeypress="formatar('##-#####-####',this)">
+                            </div>
+                        <div>
+                            <label class="mail">E-mail</label><br>
+                            <input type="email" name="email" id="email2" class="inputMenor"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                        </div>
+                    </section><br>
+            <button class="botaoSalvar" type="submit">Salvar</button>
+            <input type="button" onclick="fechar('cadastroFornecedor')" class="botaoCancelar" value="Cancelar">
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+  <script src="./js/form-fornecedores.js"></script>
+  <script src="./js/placeholder.js"></script>
+  <script src="./js/mascaras.js"></script>
   <script src="https://kit.fontawesome.com/562a71b37f.js" crossorigin="anonymous"></script>
   </body> 
 </html>
